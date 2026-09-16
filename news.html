@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お知らせ一覧 | 東医体スキー競技 公式サイト</title>
+  <meta name="description" content="東医体スキー競技大会の最新お知らせ、大会要項・エントリー情報、競技日程変更、リザルト速報などの一覧ページです。カテゴリ別に絞り込みが可能です。">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M14 6l-3.8 5.7 1.6 1.6 3.2-4.8c.4-.6 1.2-.7 1.8-.3.6.4.7 1.2.3 1.8l-4 6-5.8-5.8 1.4-1.4 3.7 3.7 2.1-3.2L12 8c-.6-.6-1.5-.7-2.1-.2L3 13.5l1.4 1.4 6.1-5.1 4.5 4.5c.3.3.7.5 1.1.5.3 0 .6-.1.8-.2l5-7.5c.8-1.2.5-2.8-.7-3.6-1.2-.8-2.8-.5-3.6.7zM7 5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">東医体スキー競技</span>
+          <span class="brand-subtitle">Eastern Medical Students' Ski Championships</span>
+        </div>
+      </a>
+
+      <!-- デスクトップ ナビゲーション -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">トップ</a>
+        <a href="news.html" class="nav-link active">お知らせ</a>
+        <a href="documents.html" class="nav-link">大会要項・書類</a>
+        <a href="schedule.html" class="nav-link">競技日程</a>
+        <a href="results.html" class="nav-link">大会結果</a>
+      </nav>
+
+      <!-- モバイルメニュー開閉ボタン -->
+      <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="メニューを開く">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイル用ドロワーメニュー -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <span class="brand-title" style="font-size: 1rem;">メニュー</span>
+      <button type="button" class="drawer-close" id="drawerClose" aria-label="閉じる">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="index.html" class="drawer-link">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        トップページ
+      </a>
+      <a href="news.html" class="drawer-link active">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+        お知らせ一覧
+      </a>
+      <a href="documents.html" class="drawer-link">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        大会要項・書類
+      </a>
+      <a href="schedule.html" class="drawer-link">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        競技日程
+      </a>
+      <a href="results.html" class="drawer-link">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        大会結果（リザルト）
+      </a>
+    </nav>
+  </aside>
+
+  <!-- ページバナー -->
+  <div class="page-banner">
+    <div class="container page-banner-content">
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <a href="index.html">ホーム</a>
+        <span>&gt;</span>
+        <span>お知らせ一覧</span>
+      </nav>
+      <h1 class="page-title">お知らせ一覧</h1>
+      <p class="page-subtitle">大会実行委員会からの公式通知、競技案内、リザルトなどの最新情報</p>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="section">
+    <div class="container">
+
+      <!-- カテゴリ絞り込みフィルタータブ -->
+      <div class="filter-tabs">
+        <button type="button" class="filter-btn active" data-filter="all">すべて</button>
+        <button type="button" class="filter-btn" data-filter="important">重要</button>
+        <button type="button" class="filter-btn" data-filter="documents">大会要項・エントリー</button>
+        <button type="button" class="filter-btn" data-filter="schedule">競技日程・会場</button>
+        <button type="button" class="filter-btn" data-filter="results">大会結果・速報</button>
+        <button type="button" class="filter-btn" data-filter="other">その他・連絡</button>
+      </div>
+
+      <!-- お知らせ一覧リスト -->
+      <div class="news-list" id="newsContainer">
+
+        <!-- 記事 1 -->
+        <article class="news-item news-item-important" data-category="important documents">
+          <div class="news-meta">
+            <span class="news-date">2026.12.15</span>
+            <span class="badge badge-danger">重要</span>
+            <span class="badge badge-primary">大会要項</span>
+          </div>
+          <div class="news-content">
+            <h2 class="news-title">第67回大会の公式大会要項ならびに競技細則を公開しました</h2>
+            <p class="news-excerpt">
+              第67回冬季大会スキー競技部門の公式実施要綱およびアルペン・ノルディック両種目の競技細則PDFを公開いたしました。<br>
+              参加各校の主将・主務は内容を精読の上、所属選手の資格確認およびエントリー手続きを行ってください。
+            </p>
+            <div style="margin-top: 0.6rem;">
+              <a href="documents.html" class="btn btn-sm btn-outline-primary">要項ダウンロードページへ</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 記事 2 -->
+        <article class="news-item news-item-important" data-category="important documents">
+          <div class="news-meta">
+            <span class="news-date">2026.12.10</span>
+            <span class="badge badge-danger">重要</span>
+            <span class="badge badge-info">エントリー</span>
+          </div>
+          <div class="news-content">
+            <h2 class="news-title">参加申込エントリーシートおよび健康調査票の配布を開始しました</h2>
+            <p class="news-excerpt">
+              本年度のエントリー受付期間は【2026年12月10日(木)〜12月25日(金) 23:59必着】となります。<br>
+              指定のExcelエントリーシートおよび選手誓約書を揃え、大会事務局メール宛てにご送付ください。期限後の受付は原則できませんのでご注意ください。
+            </p>
+          </div>
+        </article>
+
+        <!-- 記事 3 -->
+        <article class="news-item" data-category="schedule">
+          <div class="news-meta">
+            <span class="news-date">2026.12.01</span>
+            <span class="badge badge-primary">競技日程</span>
+          </div>
+          <div class="news-content">
+            <h2 class="news-title">競技日程（タイムスケジュール）暫定版を公開しました</h2>
+            <p class="news-excerpt">
+              志賀高原・焼額山（アルペン）および蓮池特設コース（クロスカントリー）における各競技日のタイムテーブル暫定版を掲載しました。<br>
+              気象条件やコース状況による変更が生じた場合は、本サイトおよび現地掲示板・公式LINEにて随時ご連絡いたします。
+            </p>
+            <div style="margin-top: 0.6rem;">
+              <a href="schedule.html" class="btn btn-sm btn-outline-primary">競技日程を見る</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 記事 4 -->
+        <article class="news-item" data-category="other">
+          <div class="news-meta">
+            <span class="news-date">2026.11.20</span>
+            <span class="badge badge-gray">会場連絡</span>
+          </div>
+          <div class="news-content">
+            <h2 class="news-title">ワックス小屋の割当希望申請および現地宿泊案内について</h2>
+            <p class="news-excerpt">
+              志賀高原現地における各大学ごとのワックス小屋配置および使用ルールを定めました。<br>
+              希望校は申請フォームより必要事項を明記の上、12月15日までに申請を行ってください。
+            </p>
+          </div>
+        </article>
+
+        <!-- 記事 5 -->
+        <article class="news-item news-item-important" data-category="important other">
+          <div class="news-meta">
+            <span class="news-date">2026.11.05</span>
+            <span class="badge badge-danger">重要</span>
+            <span class="badge badge-gray">安全管理</span>
+          </div>
+          <div class="news-content">
+            <h2 class="news-title">スキー競技におけるヘルメット規格および安全装備の遵守について</h2>
+            <p class="news-excerpt">
+              FIS・SAJ規則の改定に伴い、アルペン競技（GS/SL）におけるヘルメットの規格認証基準が更新されています。<br>
+              非認証ヘルメットではインスペクションおよび出走が認められませんので、各校事前に基準適合をご確認ください。
+            </p>
+          </div>
+        </article>
+
+        <!-- 記事 6 -->
+        <article class="news-item" data-category="results">
+          <div class="news-meta">
+            <span class="news-date">2026.10.15</span>
+            <span class="badge badge-gold">リザルト</span>
+          </div>
+          <div class="news-content">
+            <h2 class="news-title">前年度（第66回大会）公式記録集およびアーカイブPDFの再掲</h2>
+            <p class="news-excerpt">
+              昨シーズン開催された第66回大会の各種目公式リザルトおよび学校対抗総合成績のPDFを大会結果アーカイブページに整理掲載いたしました。
+            </p>
+            <div style="margin-top: 0.6rem;">
+              <a href="results.html" class="btn btn-sm btn-outline-primary">大会結果アーカイブへ</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 記事 7 -->
+        <article class="news-item" data-category="documents other">
+          <div class="news-meta">
+            <span class="news-date">2026.10.01</span>
+            <span class="badge badge-info">広報</span>
+          </div>
+          <div class="news-content">
+            <h2 class="news-title">第67回東医体スキー競技 公式ホームページを開設いたしました</h2>
+            <p class="news-excerpt">
+              今大会の公式Webサイトを開設しました。大会要項、日程、エントリー、リザルトなどの情報はすべて本サイトを通じて迅速に発信してまいります。
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>東医体スキー競技</h4>
+          <p>
+            東日本医科学生体育大会 冬季大会 スキー競技部門 公式ホームページ。<br>
+            医科学生アスリートの挑戦と健闘を応援します。
+          </p>
+          <div class="footer-contact">
+            <strong>大会実行委員会 事務局</strong><br>
+            〒381-0401 長野県下高井郡山ノ内町志賀高原<br>
+            お問い合わせ：info@toitai-ski-example.jp
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>ページ一覧</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">トップページ</a></li>
+            <li><a href="news.html">お知らせ一覧</a></li>
+            <li><a href="documents.html">大会要項・書類ダウンロード</a></li>
+            <li><a href="schedule.html">競技日程・タイムテーブル</a></li>
+            <li><a href="results.html">大会結果（リザルト）</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>大会関連リンク</h5>
+          <ul class="footer-links">
+            <li><a href="documents.html">大会要項 PDF</a></li>
+            <li><a href="documents.html">各種エントリーシート</a></li>
+            <li><a href="schedule.html#access">会場・交通アクセス</a></li>
+            <li><a href="results.html">歴代大会記録</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026-2027 東日本医科学生体育大会冬季大会 スキー競技部会. All Rights Reserved.</p>
+        <p>※本サイトは東医体スキー競技の公式ポータルサイトです。</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/microcms.js"></script>
+</body>
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大会結果（リザルト） | 東医体スキー競技 公式サイト</title>
+  <meta name="description" content="東医体スキー競技大会の公式競技結果（リザルト）一覧ページです。アルペンGS/SL、クロスカントリー、学校対抗リレーおよび総合成績のPDFリンクを掲載しています。">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M14 6l-3.8 5.7 1.6 1.6 3.2-4.8c.4-.6 1.2-.7 1.8-.3.6.4.7 1.2.3 1.8l-4 6-5.8-5.8 1.4-1.4 3.7 3.7 2.1-3.2L12 8c-.6-.6-1.5-.7-2.1-.2L3 13.5l1.4 1.4 6.1-5.1 4.5 4.5c.3.3.7.5 1.1.5.3 0 .6-.1.8-.2l5-7.5c.8-1.2.5-2.8-.7-3.6-1.2-.8-2.8-.5-3.6.7zM7 5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">東医体スキー競技</span>
+          <span class="brand-subtitle">Eastern Medical Students' Ski Championships</span>
+        </div>
+      </a>
+
+      <!-- デスクトップ ナビゲーション -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">トップ</a>
+        <a href="news.html" class="nav-link">お知らせ</a>
+        <a href="documents.html" class="nav-link">大会要項・書類</a>
+        <a href="schedule.html" class="nav-link">競技日程</a>
+        <a href="results.html" class="nav-link active">大会結果</a>
+      </nav>
+
+      <!-- モバイルメニュー開閉ボタン -->
+      <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="メニューを開く">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイル用ドロワーメニュー -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <span class="brand-title" style="font-size: 1rem;">メニュー</span>
+      <button type="button" class="drawer-close" id="drawerClose" aria-label="閉じる">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="index.html" class="drawer-link">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        トップページ
+      </a>
+      <a href="news.html" class="drawer-link">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+        お知らせ一覧
+      </a>
+      <a href="documents.html" class="drawer-link">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        大会要項・書類
+      </a>
+      <a href="schedule.html" class="drawer-link">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        競技日程
+      </a>
+      <a href="results.html" class="drawer-link active">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        大会結果（リザルト）
+      </a>
+    </nav>
+  </aside>
+
+  <!-- ページバナー -->
+  <div class="page-banner">
+    <div class="container page-banner-content">
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <a href="index.html">ホーム</a>
+        <span>&gt;</span>
+        <span>大会結果（リザルト）</span>
+      </nav>
+      <h1 class="page-title">大会結果（リザルト）</h1>
+      <p class="page-subtitle">各種目の公式リザルトPDFおよび学校対抗総合成績の記録です</p>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="section">
+    <div class="container">
+
+      <!-- 速報ステータスバナー -->
+      <div class="results-hero-banner">
+        <div>
+          <h3>第67回大会 公式記録リザルト</h3>
+          <p>各種目の競技終了後、審判員・TD承認を経て順次公式PDFをアップロードいたします。</p>
+        </div>
+        <div>
+          <span class="badge badge-gold" style="font-size: 0.85rem; padding: 0.5rem 1rem;">
+            最新確定リザルト掲載中
+          </span>
+        </div>
+      </div>
+
+      <!-- 動的リザルト領域（microCMS連携） -->
+      <div id="resultsDynamicArea">
+        <!-- セクション1: アルペン競技リザルト -->
+        <section class="result-group">
+        <h2 class="result-group-title">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          アルペン競技 リザルト (Alpine Skiing)
+        </h2>
+
+        <div class="result-cards-grid">
+          <!-- 男子 大回転 GS -->
+          <div class="result-card">
+            <div class="result-card-top">
+              <div class="result-card-header">
+                <span class="badge badge-primary">アルペン</span>
+                <span class="badge badge-info">公式リザルト</span>
+              </div>
+              <h3 class="result-title">男子 大回転 (Giant Slalom)</h3>
+              <p class="result-meta-info">会場：焼額山 第1ゴンドラ特設GSコース | 出走：78名</p>
+
+              <!-- 上位入賞者プレビュー -->
+              <div class="podium-preview">
+                <div class="podium-item">
+                  <span class="medal-icon">🥇 1位</span>
+                  <span class="podium-name">田中 健一 (3年)</span>
+                  <span class="podium-school">東京大学医学部</span>
+                </div>
+                <div class="podium-item">
+                  <span class="medal-icon">🥈 2位</span>
+                  <span class="podium-name">佐藤 翔太 (4年)</span>
+                  <span class="podium-school">東北大学医学部</span>
+                </div>
+                <div class="podium-item">
+                  <span class="medal-icon">🥉 3位</span>
+                  <span class="podium-name">渡辺 蓮 (2年)</span>
+                  <span class="podium-school">慶應義塾大学医学部</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="assets/docs/sample_document.pdf" download="男子大回転_公式リザルト.pdf" class="result-download-btn">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              リザルトPDFをダウンロード (PDF)
+            </a>
+          </div>
+
+          <!-- 女子 大回転 GS -->
+          <div class="result-card">
+            <div class="result-card-top">
+              <div class="result-card-header">
+                <span class="badge badge-primary">アルペン</span>
+                <span class="badge badge-info">公式リザルト</span>
+              </div>
+              <h3 class="result-title">女子 大回転 (Giant Slalom)</h3>
+              <p class="result-meta-info">会場：焼額山 第1ゴンドラ特設GSコース | 出走：54名</p>
+
+              <div class="podium-preview">
+                <div class="podium-item">
+                  <span class="medal-icon">🥇 1位</span>
+                  <span class="podium-name">小林 葵 (2年)</span>
+                  <span class="podium-school">信州大学医学部</span>
+                </div>
+                <div class="podium-item">
+                  <span class="medal-icon">🥈 2位</span>
+                  <span class="podium-name">伊藤 結衣 (4年)</span>
+                  <span class="podium-school">北海道大学医学部</span>
+                </div>
+                <div class="podium-item">
+                  <span class="medal-icon">🥉 3位</span>
+                  <span class="podium-name">高橋 美咲 (1年)</span>
+                  <span class="podium-school">日本医科大学</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="assets/docs/sample_document.pdf" download="女子大回転_公式リザルト.pdf" class="result-download-btn">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              リザルトPDFをダウンロード (PDF)
+            </a>
+          </div>
+
+          <!-- 男子 回転 SL -->
+          <div class="result-card">
+            <div class="result-card-top">
+              <div class="result-card-header">
+                <span class="badge badge-primary">アルペン</span>
+                <span class="badge badge-info">公式リザルト</span>
+              </div>
+              <h3 class="result-title">男子 回転 (Slalom)</h3>
+              <p class="result-meta-info">会場：焼額山 特設SLコース | 出走：72名</p>
+
+              <div class="podium-preview">
+                <div class="podium-item">
+                  <span class="medal-icon">🥇 1位</span>
+                  <span class="podium-name">中村 大輝 (4年)</span>
+                  <span class="podium-school">弘前大学医学部</span>
+                </div>
+                <div class="podium-item">
+                  <span class="medal-icon">🥈 2位</span>
+                  <span class="podium-name">田中 健一 (3年)</span>
+                  <span class="podium-school">東京大学医学部</span>
+                </div>
+                <div class="podium-item">
+                  <span class="medal-icon">🥉 3位</span>
+                  <span class="podium-name">松本 陸 (2年)</span>
+                  <span class="podium-school">順天堂大学医学部</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="assets/docs/sample_document.pdf" download="男子回転_公式リザルト.pdf" class="result-download-btn">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              リザルトPDFをダウンロード (PDF)
+            </a>
+          </div>
+
+          <!-- 女子 回転 SL -->
+          <div class="result-card">
+            <div class="result-card-top">
+              <div class="result-card-header">
+                <span class="badge badge-primary">アルペン</span>
+                <span class="badge badge-info">公式リザルト</span>
+              </div>
+              <h3 class="result-title">女子 回転 (Slalom)</h3>
+              <p class="result-meta-info">会場：焼額山 特設SLコース | 出走：48名</p>
+
+              <div class="podium-preview">
+                <div class="podium-item">
+                  <span class="medal-icon">🥇 1位</span>
+                  <span class="podium-name">小林 葵 (2年)</span>
+                  <span class="podium-school">信州大学医学部</span>
+                </div>
+                <div class="podium-item">
+                  <span class="medal-icon">🥈 2位</span>
+                  <span class="podium-name">山本 莉子 (3年)</span>
+                  <span class="podium-school">筑波大学医学部</span>
+                </div>
+                <div class="podium-item">
+                  <span class="medal-icon">🥉 3位</span>
+                  <span class="podium-name">伊藤 結衣 (4年)</span>
+                  <span class="podium-school">北海道大学医学部</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="assets/docs/sample_document.pdf" download="女子回転_公式リザルト.pdf" class="result-download-btn">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              リザルトPDFをダウンロード (PDF)
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- セクション2: クロスカントリー競技リザルト -->
+      <section class="result-group">
+        <h2 class="result-group-title">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          ノルディック・クロスカントリー競技 リザルト (Cross-Country)
+        </h2>
+
+        <div class="result-cards-grid">
+          <!-- 男子 10km フリー -->
+          <div class="result-card">
+            <div class="result-card-top">
+              <div class="result-card-header">
+                <span class="badge badge-primary">クロカン</span>
+                <span class="badge badge-info">公式リザルト</span>
+              </div>
+              <h3 class="result-title">男子 10km フリー</h3>
+              <p class="result-meta-info">会場：蓮池・一の瀬XCコース | 出走：62名</p>
+
+              <div class="podium-preview">
+                <div class="podium-item">
+                  <span class="medal-icon">🥇 1位</span>
+                  <span class="podium-name">木村 颯汰 (3年)</span>
+                  <span class="podium-school">秋田大学医学部</span>
+                </div>
+                <div class="podium-item">
+                  <span class="medal-icon">🥈 2位</span>
+                  <span class="podium-name">佐々木 翼 (4年)</span>
+                  <span class="podium-school">山形大学医学部</span>
+                </div>
+                <div class="podium-item">
+                  <span class="medal-icon">🥉 3位</span>
+                  <span class="podium-name">遠藤 拓海 (2年)</span>
+                  <span class="podium-school">北海道大学医学部</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="assets/docs/sample_document.pdf" download="男子10kmフリー_公式リザルト.pdf" class="result-download-btn">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              リザルトPDFをダウンロード (PDF)
+            </a>
+          </div>
+
+          <!-- 女子 5km クラシカル -->
+          <div class="result-card">
+            <div class="result-card-top">
+              <div class="result-card-header">
+                <span class="badge badge-primary">クロカン</span>
+                <span class="badge badge-info">公式リザルト</span>
+              </div>
+              <h3 class="result-title">女子 5km クラシカル</h3>
+              <p class="result-meta-info">会場：蓮池・一の瀬XCコース | 出走：42名</p>
+
+              <div class="podium-preview">
+                <div class="podium-item">
+                  <span class="medal-icon">🥇 1位</span>
+                  <span class="podium-name">齋藤 陽菜 (3年)</span>
+                  <span class="podium-school">東北大学医学部</span>
+                </div>
+                <div class="podium-item">
+                  <span class="medal-icon">🥈 2位</span>
+                  <span class="podium-name">小野 遥香 (2年)</span>
+                  <span class="podium-school">弘前大学医学部</span>
+                </div>
+                <div class="podium-item">
+                  <span class="medal-icon">🥉 3位</span>
+                  <span class="podium-name">鈴木 真央 (4年)</span>
+                  <span class="podium-school">新潟大学医学部</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="assets/docs/sample_document.pdf" download="女子5kmクラシカル_公式リザルト.pdf" class="result-download-btn">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              リザルトPDFをダウンロード (PDF)
+            </a>
+          </div>
+
+          <!-- 男子 学校対抗リレー (4×5km) -->
+          <div class="result-card">
+            <div class="result-card-top">
+              <div class="result-card-header">
+                <span class="badge badge-gold">リレー</span>
+                <span class="badge badge-info">公式リザルト</span>
+              </div>
+              <h3 class="result-title">男子 学校対抗リレー (4×5km)</h3>
+              <p class="result-meta-info">会場：蓮池スタジアム | 出場：18チーム</p>
+
+              <div class="podium-preview">
+                <div class="podium-item">
+                  <span class="medal-icon">🥇 1位</span>
+                  <span class="podium-name">東北大学医学部</span>
+                  <span class="podium-school">54分12秒3</span>
+                </div>
+                <div class="podium-item">
+                  <span class="medal-icon">🥈 2位</span>
+                  <span class="podium-name">北海道大学医学部</span>
+                  <span class="podium-school">54分48秒6</span>
+                </div>
+                <div class="podium-item">
+                  <span class="medal-icon">🥉 3位</span>
+                  <span class="podium-name">秋田大学医学部</span>
+                  <span class="podium-school">55分02秒1</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="assets/docs/sample_document.pdf" download="男子リレー_公式リザルト.pdf" class="result-download-btn">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              リザルトPDFをダウンロード (PDF)
+            </a>
+          </div>
+
+          <!-- 女子 学校対抗リレー (3×3km) -->
+          <div class="result-card">
+            <div class="result-card-top">
+              <div class="result-card-header">
+                <span class="badge badge-gold">リレー</span>
+                <span class="badge badge-info">公式リザルト</span>
+              </div>
+              <h3 class="result-title">女子 学校対抗リレー (3×3km)</h3>
+              <p class="result-meta-info">会場：蓮池スタジアム | 出場：14チーム</p>
+
+              <div class="podium-preview">
+                <div class="podium-item">
+                  <span class="medal-icon">🥇 1位</span>
+                  <span class="podium-name">東北大学医学部</span>
+                  <span class="podium-school">29分35秒8</span>
+                </div>
+                <div class="podium-item">
+                  <span class="medal-icon">🥈 2位</span>
+                  <span class="podium-name">弘前大学医学部</span>
+                  <span class="podium-school">30分04秒2</span>
+                </div>
+                <div class="podium-item">
+                  <span class="medal-icon">🥉 3位</span>
+                  <span class="podium-name">信州大学医学部</span>
+                  <span class="podium-school">30分41秒0</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="assets/docs/sample_document.pdf" download="女子リレー_公式リザルト.pdf" class="result-download-btn">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              リザルトPDFをダウンロード (PDF)
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- セクション3: 学校対抗総合成績 -->
+      <section class="result-group">
+        <h2 class="result-group-title">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          学校対抗総合成績 (Overall Team Standings)
+        </h2>
+
+        <div class="doc-grid">
+          <div class="doc-card">
+            <div class="doc-card-top">
+              <span class="file-badge pdf">PDF</span>
+              <div class="doc-info">
+                <h4>男子 学校対抗総合得点・順位表</h4>
+                <p>アルペン（GS/SL）およびノルディック（個人・リレー）全種目合算得点表。</p>
+              </div>
+            </div>
+            <div class="doc-card-bottom">
+              <span class="doc-meta">確定記録 | 420 KB</span>
+              <a href="assets/docs/sample_document.pdf" download="男子学校対抗総合成績.pdf" class="doc-download-btn">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                PDFダウンロード
+              </a>
+            </div>
+          </div>
+
+          <div class="doc-card">
+            <div class="doc-card-top">
+              <span class="file-badge pdf">PDF</span>
+              <div class="doc-info">
+                <h4>女子 学校対抗総合得点・順位表</h4>
+                <p>女子全種目の合計獲得ポイントおよび大学別順位一覧表です。</p>
+              </div>
+            </div>
+            <div class="doc-card-bottom">
+              <span class="doc-meta">確定記録 | 390 KB</span>
+              <a href="assets/docs/sample_document.pdf" download="女子学校対抗総合成績.pdf" class="doc-download-btn">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                PDFダウンロード
+              </a>
+            </div>
+          </div>
+
+          <div class="doc-card">
+            <div class="doc-card-top">
+              <span class="file-badge pdf">PDF</span>
+              <div class="doc-info">
+                <h4>第67回大会 全競技公式記録集（完全版一括）</h4>
+                <p>個人・団体全リザルト、ラップタイム、天候コンディション記録を含む完全版冊子PDF。</p>
+              </div>
+            </div>
+            <div class="doc-card-bottom">
+              <span class="doc-meta">完全記録集 | 4.8 MB</span>
+              <a href="assets/docs/sample_document.pdf" download="第67回東医体スキー_完全公式記録集.pdf" class="doc-download-btn">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                PDFダウンロード
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+
+      <!-- セクション4: 過去大会アーカイブ -->
+      <section class="result-group" id="archive" style="margin-bottom: 0;">
+        <h2 class="result-group-title">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+          過去大会リザルト アーカイブ
+        </h2>
+
+        <div class="doc-grid">
+          <div class="doc-card">
+            <div class="doc-card-top">
+              <span class="file-badge pdf">PDF</span>
+              <div class="doc-info">
+                <h4>第66回大会 (2026年) 公式記録集</h4>
+                <p>会場：長野県 菅平高原スキー場 / 総合優勝：東北大学医学部</p>
+              </div>
+            </div>
+            <div class="doc-card-bottom">
+              <span class="doc-meta">アーカイブ | 3.9 MB</span>
+              <a href="assets/docs/sample_document.pdf" download="第66回大会_公式記録集.pdf" class="doc-download-btn">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                ダウンロード
+              </a>
+            </div>
+          </div>
+
+          <div class="doc-card">
+            <div class="doc-card-top">
+              <span class="file-badge pdf">PDF</span>
+              <div class="doc-info">
+                <h4>第65回大会 (2025年) 公式記録集</h4>
+                <p>会場：新潟県 苗場スキー場 / 総合優勝：北海道大学医学部</p>
+              </div>
+            </div>
+            <div class="doc-card-bottom">
+              <span class="doc-meta">アーカイブ | 3.7 MB</span>
+              <a href="assets/docs/sample_document.pdf" download="第65回大会_公式記録集.pdf" class="doc-download-btn">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                ダウンロード
+              </a>
+            </div>
+          </div>
+
+          <div class="doc-card">
+            <div class="doc-card-top">
+              <span class="file-badge pdf">PDF</span>
+              <div class="doc-info">
+                <h4>第64回大会 (2024年) 公式記録集</h4>
+                <p>会場：長野県 野沢温泉スキー場 / 総合優勝：東北大学医学部</p>
+              </div>
+            </div>
+            <div class="doc-card-bottom">
+              <span class="doc-meta">アーカイブ | 3.5 MB</span>
+              <a href="assets/docs/sample_document.pdf" download="第64回大会_公式記録集.pdf" class="doc-download-btn">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                ダウンロード
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>東医体スキー競技</h4>
+          <p>
+            東日本医科学生体育大会 冬季大会 スキー競技部門 公式ホームページ。<br>
+            医科学生アスリートの挑戦と健闘を応援します。
+          </p>
+          <div class="footer-contact">
+            <strong>大会実行委員会 事務局</strong><br>
+            〒381-0401 長野県下高井郡山ノ内町志賀高原<br>
+            お問い合わせ：info@toitai-ski-example.jp
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>ページ一覧</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">トップページ</a></li>
+            <li><a href="news.html">お知らせ一覧</a></li>
+            <li><a href="documents.html">大会要項・書類ダウンロード</a></li>
+            <li><a href="schedule.html">競技日程・タイムテーブル</a></li>
+            <li><a href="results.html">大会結果（リザルト）</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>大会関連リンク</h5>
+          <ul class="footer-links">
+            <li><a href="documents.html">大会要項 PDF</a></li>
+            <li><a href="documents.html">各種エントリーシート</a></li>
+            <li><a href="schedule.html#access">会場・交通アクセス</a></li>
+            <li><a href="results.html">歴代大会記録</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026-2027 東日本医科学生体育大会冬季大会 スキー競技部会. All Rights Reserved.</p>
+        <p>※本サイトは東医体スキー競技の公式ポータルサイトです。</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/microcms.js"></script>
+</body>
+</html>

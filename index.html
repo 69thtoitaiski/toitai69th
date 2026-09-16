@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>東医体スキー競技 | 東日本医科学生体育大会 冬季大会 スキー競技部門 公式サイト</title>
+  <meta name="description" content="東日本医科学生体育大会 冬季大会 スキー競技部門（東医体スキー競技）の公式ホームページです。大会要項、競技日程、お知らせ、大会結果（リザルト）、書類ダウンロードをご案内します。">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-brand">
+        <div class="brand-icon">
+          <!-- スキーヤー / マウンテン アイコン -->
+          <svg viewBox="0 0 24 24">
+            <path d="M14 6l-3.8 5.7 1.6 1.6 3.2-4.8c.4-.6 1.2-.7 1.8-.3.6.4.7 1.2.3 1.8l-4 6-5.8-5.8 1.4-1.4 3.7 3.7 2.1-3.2L12 8c-.6-.6-1.5-.7-2.1-.2L3 13.5l1.4 1.4 6.1-5.1 4.5 4.5c.3.3.7.5 1.1.5.3 0 .6-.1.8-.2l5-7.5c.8-1.2.5-2.8-.7-3.6-1.2-.8-2.8-.5-3.6.7zM7 5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">東医体スキー競技</span>
+          <span class="brand-subtitle">Eastern Medical Students' Ski Championships</span>
+        </div>
+      </a>
+
+      <!-- デスクトップ ナビゲーション -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">トップ</a>
+        <a href="news.html" class="nav-link">お知らせ</a>
+        <a href="documents.html" class="nav-link">大会要項・書類</a>
+        <a href="schedule.html" class="nav-link">競技日程</a>
+        <a href="results.html" class="nav-link">大会結果</a>
+      </nav>
+
+      <!-- モバイルメニュー開閉ボタン -->
+      <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="メニューを開く">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイル用ドロワーメニュー -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <span class="brand-title" style="font-size: 1rem;">メニュー</span>
+      <button type="button" class="drawer-close" id="drawerClose" aria-label="閉じる">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="index.html" class="drawer-link active">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        トップページ
+      </a>
+      <a href="news.html" class="drawer-link">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+        お知らせ一覧
+      </a>
+      <a href="documents.html" class="drawer-link">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        大会要項・書類
+      </a>
+      <a href="schedule.html" class="drawer-link">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        競技日程
+      </a>
+      <a href="results.html" class="drawer-link">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        大会結果（リザルト）
+      </a>
+    </nav>
+  </aside>
+
+  <!-- メインコンテンツ -->
+  <main>
+    <!-- ヒーローセクション -->
+    <section class="hero">
+      <div class="hero-particles"></div>
+      <!-- 雪山シルエット（装飾SVG） -->
+      <svg class="hero-bg-mountains" viewBox="0 0 1440 280" fill="none" preserveAspectRatio="none">
+        <polygon points="0,280 220,120 480,240 760,80 1020,200 1280,60 1440,220 1440,280" fill="#ffffff"/>
+      </svg>
+
+      <div class="container hero-content">
+        <div class="hero-edition-tag">
+          <span class="dot"></span>
+          <span>第67回 冬季大会 スキー競技部門 公式ページ</span>
+        </div>
+        <h1 class="hero-title">
+          <span>EASTERN MEDICAL STUDENTS' SKI CHAMPIONSHIPS</span>
+          東医体スキー競技
+        </h1>
+        <p class="hero-desc">
+          東日本医科学生体育連盟加盟大学の精鋭たちが白銀の峰に集結。<br>
+          アルペン競技（回転・大回転）およびクロスカントリー競技の大会公式情報を発信します。
+        </p>
+
+        <!-- 会期・会場メタ情報 -->
+        <div class="hero-meta-bar">
+          <div class="hero-meta-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <strong>会期：2027年1月5日(火) 〜 1月9日(土)</strong>
+          </div>
+          <div class="hero-meta-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <strong>会場：長野県 志賀高原スキー場（焼額山・一の瀬特設コース）</strong>
+          </div>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="documents.html" class="btn btn-white">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            大会要項・書類ダウンロード
+          </a>
+          <a href="schedule.html" class="btn btn-outline-white">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            競技日程を見る
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 重要リンク（クイックアクセスカード） -->
+    <div class="container">
+      <div class="quick-links-grid">
+        <a href="documents.html" class="quick-link-card">
+          <div class="quick-link-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <div class="quick-link-text">
+            <h3>大会要項・書類</h3>
+            <p>要綱・エントリーシート各種様式</p>
+          </div>
+        </a>
+
+        <a href="schedule.html" class="quick-link-card">
+          <div class="quick-link-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="quick-link-text">
+            <h3>競技日程・時間</h3>
+            <p>全競技種目のタイムスケジュール</p>
+          </div>
+        </a>
+
+        <a href="results.html" class="quick-link-card">
+          <div class="quick-link-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+          </div>
+          <div class="quick-link-text">
+            <h3>大会結果（リザルト）</h3>
+            <p>速報・確定リザルトPDF一覧</p>
+          </div>
+        </a>
+
+        <a href="documents.html#courses" class="quick-link-card">
+          <div class="quick-link-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+          </div>
+          <div class="quick-link-text">
+            <h3>コース・会場マップ</h3>
+            <p>ゲレンデ図・ワックス小屋案内</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- お知らせ一覧セクション -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">INFORMATION</span>
+          <h2 class="section-title">お知らせ一覧</h2>
+          <p class="section-desc">大会実行委員会からの最新情報、要項公開、注意事項等をお知らせします。</p>
+        </div>
+
+        <div class="news-list" id="topNewsList">
+          <!-- お知らせアイテム1（重要） -->
+          <a href="news.html" class="news-item news-item-important">
+            <div class="news-meta">
+              <span class="news-date">2026.12.15</span>
+              <span class="badge badge-danger">重要</span>
+              <span class="badge badge-primary">大会要項</span>
+            </div>
+            <div class="news-content">
+              <h3 class="news-title">第67回大会の公式大会要項ならびに競技細則を公開しました</h3>
+              <p class="news-excerpt">参加各大学の主将・主務の皆様は、ダウンロードページより要項をご確認の上、期日までにエントリー手続きを行ってください。</p>
+            </div>
+            <div class="news-arrow">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- お知らせアイテム2 -->
+          <a href="news.html" class="news-item">
+            <div class="news-meta">
+              <span class="news-date">2026.12.10</span>
+              <span class="badge badge-info">エントリー</span>
+            </div>
+            <div class="news-content">
+              <h3 class="news-title">参加申込エントリーシートおよび健康調査票の配布を開始しました</h3>
+              <p class="news-excerpt">各種提出書類のExcel様式およびPDFを書類ダウンロードページに掲載しました。提出期限は12月25日(金)厳守となります。</p>
+            </div>
+            <div class="news-arrow">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- お知らせアイテム3 -->
+          <a href="news.html" class="news-item">
+            <div class="news-meta">
+              <span class="news-date">2026.12.01</span>
+              <span class="badge badge-primary">競技日程</span>
+            </div>
+            <div class="news-content">
+              <h3 class="news-title">競技日程（タイムスケジュール）暫定版を公開しました</h3>
+              <p class="news-excerpt">アルペン競技（GS/SL）およびクロスカントリー競技の公式トレーニング・競技開始時刻のスケジュール一覧を掲載しました。</p>
+            </div>
+            <div class="news-arrow">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- お知らせアイテム4 -->
+          <a href="news.html" class="news-item">
+            <div class="news-meta">
+              <span class="news-date">2026.11.20</span>
+              <span class="badge badge-gray">会場連絡</span>
+            </div>
+            <div class="news-content">
+              <h3 class="news-title">ワックス小屋の割当希望申請および現地宿泊案内について</h3>
+              <p class="news-excerpt">志賀高原現地における各大学ワックス小屋の割当ルールおよび指定宿舎のご案内を更新しました。</p>
+            </div>
+            <div class="news-arrow">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        </div>
+
+        <div class="news-more-wrap">
+          <a href="news.html" class="btn btn-outline-primary">
+            すべてのお知らせを見る
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 大会概要セクション -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">OVERVIEW</span>
+          <h2 class="section-title">大会概要</h2>
+          <p class="section-desc">第67回 東日本医科学生体育大会 冬季大会 スキー競技部門の開催基本要綱です。</p>
+        </div>
+
+        <div class="overview-grid">
+          <!-- 概要カード1: 大会基本情報 -->
+          <div class="overview-card">
+            <div class="overview-card-header">
+              <div class="overview-icon">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h3>大会概要・組織</h3>
+            </div>
+            <table class="overview-table">
+              <tbody>
+                <tr>
+                  <th>大会名称</th>
+                  <td>第67回 東日本医科学生体育大会 冬季大会 スキー競技部門</td>
+                </tr>
+                <tr>
+                  <th>主催</th>
+                  <td>東日本医科学生体育連盟</td>
+                </tr>
+                <tr>
+                  <th>主管</th>
+                  <td>第67回東医体実行委員会 スキー競技部会</td>
+                </tr>
+                <tr>
+                  <th>後援</th>
+                  <td>山ノ内町、志賀高原観光協会、長野県スキー連盟（予定）</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 概要カード2: 期日・会場 -->
+          <div class="overview-card">
+            <div class="overview-card-header">
+              <div class="overview-icon">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              </div>
+              <h3>会期および会場</h3>
+            </div>
+            <table class="overview-table">
+              <tbody>
+                <tr>
+                  <th>開催期日</th>
+                  <td>2027年1月5日(火) 〜 1月9日(土)（5日間）</td>
+                </tr>
+                <tr>
+                  <th>開会式</th>
+                  <td>2027年1月5日(火) 志賀高原総合会館98</td>
+                </tr>
+                <tr>
+                  <th>競技会場</th>
+                  <td>長野県 下高井郡 山ノ内町 志賀高原スキー場</td>
+                </tr>
+                <tr>
+                  <th>コース</th>
+                  <td>アルペン：焼額山スキー場 特設GS/SLコース<br>クロスカントリー：一の瀬蓮池特設クロスカントリーコース</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 概要カード3: 実施競技種目 -->
+          <div class="overview-card">
+            <div class="overview-card-header">
+              <div class="overview-icon">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+              </div>
+              <h3>実施競技種目</h3>
+            </div>
+            <table class="overview-table">
+              <tbody>
+                <tr>
+                  <th>アルペン</th>
+                  <td>男子 大回転 (GS) / 女子 大回転 (GS)<br>男子 回転 (SL) / 女子 回転 (SL)</td>
+                </tr>
+                <tr>
+                  <th>ノルディック</th>
+                  <td>男子 クロスカントリー 10km フリー<br>女子 クロスカントリー 5km クラシカル<br>男子 学校対抗リレー (4×5km)<br>女子 学校対抗リレー (3×3km)</td>
+                </tr>
+                <tr>
+                  <th>表彰</th>
+                  <td>個人各種目 1位〜6位<br>男女別 学校対抗総合 1位〜3位</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 重要リンク・関連情報セクション -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">QUICK LINKS</span>
+          <h2 class="section-title">重要リンク・関連機関</h2>
+          <p class="section-desc">選手・役員・保護者の皆様に向けた便利リンク・規程集です。</p>
+        </div>
+
+        <div class="quick-links-grid" style="margin-top: 0;">
+          <a href="documents.html" class="quick-link-card">
+            <div class="quick-link-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
+            <div class="quick-link-text">
+              <h3>参加誓約書・健康調査票</h3>
+              <p>選手全員の提出が必須の指定様式</p>
+            </div>
+          </a>
+
+          <a href="schedule.html#access" class="quick-link-card">
+            <div class="quick-link-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+            </div>
+            <div class="quick-link-text">
+              <h3>会場アクセス・駐車場</h3>
+              <p>志賀高原現地への交通手段と規制</p>
+            </div>
+          </a>
+
+          <a href="results.html#archive" class="quick-link-card">
+            <div class="quick-link-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+            </div>
+            <div class="quick-link-text">
+              <h3>過去大会リザルト記録</h3>
+              <p>第60回〜第66回大会の公式記録集</p>
+            </div>
+          </a>
+
+          <a href="https://www.shigakogen.gr.jp/" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+            <div class="quick-link-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </div>
+            <div class="quick-link-text">
+              <h3>志賀高原観光協会 ゲレンデ情報</h3>
+              <p>外部公式サイト（積雪・天候情報）</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>東医体スキー競技</h4>
+          <p>
+            東日本医科学生体育大会 冬季大会 スキー競技部門 公式ホームページ。<br>
+            医科学生アスリートの挑戦と健闘を応援します。
+          </p>
+          <div class="footer-contact">
+            <strong>大会実行委員会 事務局</strong><br>
+            〒381-0401 長野県下高井郡山ノ内町志賀高原<br>
+            お問い合わせ：info@toitai-ski-example.jp
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>ページ一覧</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">トップページ</a></li>
+            <li><a href="news.html">お知らせ一覧</a></li>
+            <li><a href="documents.html">大会要項・書類ダウンロード</a></li>
+            <li><a href="schedule.html">競技日程・タイムテーブル</a></li>
+            <li><a href="results.html">大会結果（リザルト）</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>大会関連リンク</h5>
+          <ul class="footer-links">
+            <li><a href="documents.html">大会要項 PDF</a></li>
+            <li><a href="documents.html">各種エントリーシート</a></li>
+            <li><a href="schedule.html#access">会場・交通アクセス</a></li>
+            <li><a href="results.html">歴代大会記録</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026-2027 東日本医科学生体育大会冬季大会 スキー競技部会. All Rights Reserved.</p>
+        <p>※本サイトは東医体スキー競技の公式ポータルサイトです。</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/microcms.js"></script>
+</body>
+</html>
