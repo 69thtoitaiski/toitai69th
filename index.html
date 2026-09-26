@@ -5,64 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>東医体スキー競技 | 第69回 東日本医科学生体育大会 冬季大会 スキー競技部門 公式サイト</title>
   <meta name="description" content="第69回 東日本医科学生体育大会 冬季大会 スキー競技部門（東医体スキー競技）の公式ホームページです。会期：2027年3月2日〜10日、会場：White Resort 白馬さのさか・白馬クロスカントリー競技場(スノーハープ)。大会要項、日程、リザルトをご案内します。">
-  <link rel="stylesheet" href="assets/css/style.css?v=20270115_zenkakugothic">
+  <link rel="stylesheet" href="assets/css/style.css?v=20270115_plana_editorial">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;800;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
   <meta name="theme-color" content="#c5dbff">
   <style>
-    /* BAKE CHEESE TART スカイブルー・白基調 & 丸みのある角の正方形カード */
-    .quick-link-card {
-      border-radius: 18px !important;
-    }
-    .quick-link-icon {
-      border-radius: 13px !important;
-      width: 48px !important;
-      height: 48px !important;
-    }
-    .quick-link-arrow {
-      border-radius: 9px !important;
-      width: 32px !important;
-      height: 32px !important;
-    }
-    .overview-icon {
-      border-radius: 10px !important;
-      width: 44px !important;
-      height: 44px !important;
-    }
+    /* BAKE CHEESE TART スカイブルー・白基調の補助スタイル */
     .overview-card,
     .venue-card,
     .doc-card {
-      border-radius: 16px !important;
-    }
-    .news-arrow {
-      border-radius: 8px !important;
-      width: 32px !important;
-      height: 32px !important;
-    }
-    .btn-circle-arrow {
-      border-radius: 6px !important;
-      width: 22px !important;
-      height: 22px !important;
+      border-radius: 18px !important;
     }
     .badge,
     .schedule-day-badge {
       border-radius: 6px !important;
-    }
-    .btn-capsule,
-    .hero-host-capsule,
-    .btn-seiko-pill {
-      border-radius: 13px !important;
-    }
-    @media (max-width: 640px) {
-      .quick-link-card {
-        border-radius: 15px !important;
-      }
-      .quick-link-icon {
-        width: 38px !important;
-        height: 38px !important;
-        border-radius: 10px !important;
-      }
     }
   </style>
 </head>
@@ -72,7 +29,10 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="site-brand">
-        <span class="brand-title">第69回東日本医科学生総合体育大会スキー競技</span>
+        <div class="brand-text">
+          <span class="brand-sub">第69回 東日本医科学生総合体育大会</span>
+          <span class="brand-main">東医体スキー 2027</span>
+        </div>
       </a>
 
       <!-- デスクトップ ナビゲーション -->
@@ -130,92 +90,81 @@
 
   <!-- メインコンテンツ -->
   <main>
-    <!-- ヒーローセクション (白馬連峰背景・文字すかしレイアウト・完全中央揃え) -->
-    <section class="hero hero-alpine">
-      <div class="hero-overlay"></div>
-
-      <div class="container hero-container-trans">
-        <div class="hero-translucent-body">
-          <p class="hero-edition-number">第69回</p>
-          <div class="hero-titles-wrap">
-            <h1 class="hero-tournament-name">
-              <span class="text-nowrap">東日本医科学生</span><span class="text-nowrap">総合体育大会</span>
-            </h1>
-            <h2 class="hero-discipline-name">スキー競技</h2>
+    <!-- ヒーローセクション (Plan A：エディトリアル・フレームヒーロー / 写真と文字の美しい分離) -->
+    <section class="hero">
+      <div class="container hero-container">
+        <!-- 澄んだクリーンなタイポグラフィ（文字影ゼロで完全な視認性と上質さ） -->
+        <div class="hero-editorial-body">
+          <div class="hero-subtag">
+            <span class="subtag-dot"></span>
+            <span>第69回 東日本医科学生総合体育大会 冬季大会</span>
           </div>
 
-          <div class="hero-meta-block">
-            <p class="hero-event-dates">
-              <span class="text-nowrap">2027年3月2日(火)</span> <span class="venue-sep">〜</span> <span class="text-nowrap">3月10日(水)</span>
-            </p>
-            <p class="hero-event-venue">
-              <span class="venue-line">
-                <span class="venue-pref text-nowrap">開催地：長野県 白馬村</span>
-              </span>
-              <span class="venue-line">
-                <span class="venue-item text-nowrap">White Resort 白馬さのさか</span>
-                <span class="venue-sep">/</span>
-                <span class="venue-item text-nowrap">白馬クロスカントリー競技場スノーハープ</span>
-              </span>
-            </p>
+          <h1 class="hero-main-title">
+            <span class="hero-title-text">東医体スキー</span>
+            <span class="hero-year-badge">2027</span>
+          </h1>
+
+          <p class="hero-en-title">69th Eastern Medical Students' Ski Championships in Hakuba</p>
+
+          <div class="hero-info-pills">
+            <div class="hero-info-item">
+              <span class="info-label">会期</span>
+              <span class="info-val">2027年3月2日(火) 〜 3月10日(水)</span>
+            </div>
+            <span class="info-sep">/</span>
+            <div class="hero-info-item">
+              <span class="info-label">会場</span>
+              <span class="info-val">長野県 白馬村（白馬さのさか / スノーハープ）</span>
+            </div>
           </div>
 
-          <!-- 主管（半透明プレート枠） -->
-          <div class="hero-host-capsule">
-            <span class="text-nowrap">主管：東京慈恵会医科大学医学部</span>
-          </div>
-
-          <!-- セイコースポーツリンク (速報ボタン・画像完全再現) -->
-          <div class="hero-seiko-btn-wrap">
+          <div class="hero-action-row">
+            <div class="hero-host-pill">
+              <span>主管：東京慈恵会医科大学医学部</span>
+            </div>
             <a href="https://seikosportslink.com/" target="_blank" rel="noopener noreferrer" class="btn-seiko-pill">
               <span class="live-indicator-dot"></span>
-              <span class="text-nowrap">SEIKO Sports Link (速報)</span>
+              <span>SEIKO Sports Link (速報)</span>
             </a>
+          </div>
+        </div>
+
+        <!-- 額装パノラマ写真フレーム（白馬の白銀の山々を絵画のように美しく展示） -->
+        <div class="hero-photo-frame">
+          <div class="hero-photo-inner">
+            <img src="assets/images/hero-bg.png" alt="白馬連峰の白銀の峰々" class="hero-photo-img" loading="eager">
+            <div class="hero-photo-badge">
+              <span class="badge-alpine">HAKUBA ALPINE &amp; CROSS-COUNTRY</span>
+              <span class="badge-venue">White Resort Hakuba Sanosaka &amp; Snow Harp</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 重要リンク（クイックアクセスカード - BAKE CHEESE TART スタイル） -->
+    <!-- 重要リンク（クイックアクセスカード - Plan A：雑誌調ナンバリングカード） -->
     <div class="container">
       <div class="quick-links-grid">
         <a href="documents.html" class="quick-link-card">
-          <div class="quick-link-top">
-            <div class="quick-link-icon">
-              <!-- 大会要項・書類 アイコン -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <line x1="10" y1="9" x2="8" y2="9"></line>
-              </svg>
-            </div>
-            <span class="quick-link-arrow">
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          <div class="quick-link-header">
+            <span class="card-number">01</span>
+            <span class="card-arrow-icon">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"/></svg>
             </span>
           </div>
           <div class="quick-link-text">
             <span class="quick-link-en">GUIDELINES &amp; DOCS</span>
-            <h3 class="quick-link-title"><span class="text-nowrap">大会要項・書類</span></h3>
-            <p class="quick-link-desc"><span class="text-nowrap">実施要綱・</span><span class="text-nowrap">エントリーシート各種様式</span></p>
+            <h3 class="quick-link-title"><span class="text-nowrap">大会要綱・各種申請書</span></h3>
+            <p class="quick-link-desc"><span class="text-nowrap">実施要綱、</span><span class="text-nowrap">エントリーシート各種様式</span></p>
           </div>
         </a>
 
         <a href="schedule.html" class="quick-link-card">
-          <div class="quick-link-top">
-            <div class="quick-link-icon">
-              <!-- 競技日程 アイコン -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="16" y1="2" x2="16" y2="6"></line>
-                <line x1="8" y1="2" x2="8" y2="6"></line>
-                <line x1="3" y1="10" x2="21" y2="10"></line>
-                <polyline points="12 14 12 17 15 17"></polyline>
-              </svg>
-            </div>
-            <span class="quick-link-arrow">
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          <div class="quick-link-header">
+            <span class="card-number">02</span>
+            <span class="card-arrow-icon">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"/></svg>
             </span>
           </div>
           <div class="quick-link-text">
@@ -226,19 +175,10 @@
         </a>
 
         <a href="results.html" class="quick-link-card">
-          <div class="quick-link-top">
-            <div class="quick-link-icon">
-              <!-- 大会結果（トロフィー） アイコン -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                <path d="M4 22h16"></path>
-                <path d="M10 14.66V17c0 .55-.45 1-1 1H8v4h8v-4h-1c-.55 0-1-.45-1-1v-2.34"></path>
-                <path d="M18 4H6v7a6 6 0 0 0 12 0V4z"></path>
-              </svg>
-            </div>
-            <span class="quick-link-arrow">
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          <div class="quick-link-header">
+            <span class="card-number">03</span>
+            <span class="card-arrow-icon">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"/></svg>
             </span>
           </div>
           <div class="quick-link-text">
@@ -249,17 +189,10 @@
         </a>
 
         <a href="documents.html#courses" class="quick-link-card">
-          <div class="quick-link-top">
-            <div class="quick-link-icon">
-              <!-- コースマップ アイコン -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
-                <line x1="8" y1="2" x2="8" y2="18"></line>
-                <line x1="16" y1="6" x2="16" y2="22"></line>
-              </svg>
-            </div>
-            <span class="quick-link-arrow">
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          <div class="quick-link-header">
+            <span class="card-number">04</span>
+            <span class="card-arrow-icon">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"/></svg>
             </span>
           </div>
           <div class="quick-link-text">

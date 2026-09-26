@@ -149,40 +149,61 @@ ul, ol {
   text-decoration: none;
   color: var(--color-primary);
   min-width: 0;
+  gap: 0.75rem;
 }
 
-.brand-title {
-  font-family: var(--font-ja);
-  font-size: 1.12rem;
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  color: #12243d;
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-sub {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #4b8ee6;
+  line-height: 1.2;
+}
+
+.brand-main {
+  font-size: 1.24rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: #10243e;
   line-height: 1.25;
-  white-space: nowrap;
   transition: color 0.2s ease;
 }
 
-.site-brand:hover .brand-title {
+.site-brand:hover .brand-main {
   color: #2563eb;
 }
 
 @media (max-width: 1024px) {
-  .brand-title {
-    font-size: 0.98rem;
-    letter-spacing: 0.02em;
+  .brand-sub {
+    font-size: 0.64rem;
+  }
+  .brand-main {
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 768px) {
-  .brand-title {
-    font-size: 0.84rem;
-    letter-spacing: 0.01em;
+  .brand-sub {
+    font-size: 0.58rem;
+    letter-spacing: 0.03em;
+  }
+  .brand-main {
+    font-size: 0.96rem;
   }
 }
 
 @media (max-width: 380px) {
-  .brand-title {
-    font-size: 0.74rem;
+  .brand-sub {
+    font-size: 0.52rem;
+  }
+  .brand-main {
+    font-size: 0.86rem;
   }
 }
 
@@ -388,199 +409,293 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Hero Section (Top Page - Mountain Background & Razor-Sharp Central Text)
+   Hero Section (Plan A - Editorial Magazine Hero & Framed Alpine Panorama)
    ========================================================================== */
 .hero {
   position: relative;
-  background-color: #f0f7ff;
-  color: #ffffff;
+  background: linear-gradient(180deg, #f4f8fe 0%, #eaf3fd 65%, #f6faff 100%);
+  padding: 4.5rem 0 4rem;
   overflow: hidden;
-  border-bottom: 2px solid var(--color-pastel-main);
+  border-bottom: 1px solid #dce9f8;
 }
 
-.hero-alpine {
-  background-image: url('../images/hero-bg.png');
-  background-size: cover;
-  background-position: center 25%;
-  background-repeat: no-repeat;
-  min-height: 80vh;
-  padding: 6.5rem 1.5rem 6.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-/* 明るく爽やかなスカイブルー＆ホワイトの空気感オーバーレイ（暗い黒を一切使わず、晴れ渡る白馬の青空と雪景色を輝かせる） */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(197, 219, 255, 0.20) 0%,
-    rgba(255, 255, 255, 0.05) 30%,
-    rgba(255, 255, 255, 0.20) 65%,
-    rgba(240, 247, 255, 0.94) 100%
-  );
-  pointer-events: none;
-}
-
-.hero-container-trans {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 980px;
-  margin: 0 auto;
-}
-
-/* 完全中央揃え・澄んだ光彩のタイポグラフィ（黒の重い影を排除し、澄んだスカイブルーシャドウを採用） */
-.hero-translucent-body {
+.hero-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: #ffffff;
-  text-shadow: 0 2px 10px rgba(18, 48, 92, 0.45), 0 1px 3px rgba(18, 48, 92, 0.55);
 }
 
-.hero-edition-number {
-  font-size: clamp(2.2rem, 5vw, 3rem);
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  color: #ffffff;
-  line-height: 1.2;
-  margin-bottom: 0.4rem;
-}
-
-.hero-titles-wrap {
+.hero-editorial-body {
+  max-width: 900px;
+  margin: 0 auto 2.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.35rem;
-  margin-bottom: 1.85rem;
 }
 
-.hero-tournament-name {
-  font-size: clamp(1.9rem, 4.6vw, 3.2rem);
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  line-height: 1.3;
-  color: #ffffff;
-}
-
-.hero-discipline-name {
-  font-size: clamp(2.4rem, 5.8vw, 4rem);
-  font-weight: 900;
-  letter-spacing: 0.22em;
-  line-height: 1.2;
-  color: #ffffff;
-}
-
-.hero-meta-block {
-  display: flex;
-  flex-direction: column;
+.hero-subtag {
+  display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
-  margin-bottom: 2rem;
-}
-
-.hero-event-dates {
-  font-size: clamp(1.2rem, 2.7vw, 1.55rem);
+  gap: 0.5rem;
+  padding: 0.4rem 1.15rem;
+  background: #ffffff;
+  border: 1px solid #c9e0fa;
+  border-radius: var(--radius-pill);
+  font-size: 0.825rem;
   font-weight: 700;
+  color: #3b74c4;
   letter-spacing: 0.08em;
-  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(74, 132, 212, 0.08);
+  margin-bottom: 1.25rem;
 }
 
-.hero-event-venue {
-  font-size: clamp(0.95rem, 2vw, 1.15rem);
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  color: #ffffff;
-  max-width: 860px;
-  line-height: 1.7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.35rem;
+.subtag-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #2563eb;
+  border-radius: 50%;
+  display: inline-block;
 }
 
-.venue-line {
+.hero-main-title {
+  font-size: clamp(2.6rem, 6.2vw, 4.2rem);
+  font-weight: 900;
+  color: #10243e;
+  line-height: 1.18;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.65rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.35rem 0.65rem;
+  gap: 0.4rem 0.85rem;
 }
 
-.venue-pref {
+.hero-year-badge {
+  color: #2563eb;
+  font-family: var(--font-en);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.hero-en-title {
+  font-family: var(--font-en);
+  font-size: clamp(0.78rem, 1.6vw, 0.92rem);
   font-weight: 700;
-  color: #ffffff;
+  color: #5a82b2;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 1.85rem;
 }
 
-.venue-sep {
-  opacity: 0.65;
-  font-weight: 300;
-  padding: 0 0.2rem;
-}
-
-/* 主管：東京慈恵会医科大学医学部（BAKE Cheesetartスタイル - 純白×パステルブルーのクリーンなプレート） */
-.hero-host-capsule {
+.hero-info-pills {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 2.8rem;
-  background: rgba(255, 255, 255, 0.94);
-  border: 1.5px solid #a3c9f8;
-  border-radius: 12px !important;
-  color: #12243d;
-  font-size: clamp(1.05rem, 2vw, 1.18rem);
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  padding: 0.85rem 1.85rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid #d6e7f8;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 18px rgba(18, 48, 92, 0.05);
   margin-bottom: 2rem;
-  box-shadow: 0 6px 20px rgba(96, 165, 250, 0.25);
-  transition: all 0.25s ease;
-  text-shadow: none;
 }
 
-.hero-host-capsule:hover {
-  background: #ffffff;
-  border-color: #3b82f6;
-  box-shadow: 0 8px 24px rgba(96, 165, 250, 0.38);
-  transform: translateY(-2px);
+.hero-info-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  color: #1e293b;
 }
 
-/* セイコースポーツリンク（鮮やかなレッド・黒影完全排除） */
-.hero-seiko-btn-wrap {
-  margin-bottom: 1rem;
+.info-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.2rem 0.55rem;
+  background-color: #eaf3fe;
+  color: #2563eb;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+
+.info-val {
+  font-weight: 700;
+  color: #12243d;
+}
+
+.info-sep {
+  color: #bfdbfe;
+  font-weight: 300;
+}
+
+.hero-action-row {
   display: flex;
+  align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
   width: 100%;
+}
+
+.hero-host-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  background: #ffffff;
+  border: 1.5px solid #bddbfc;
+  border-radius: 12px;
+  color: #12243d;
+  font-size: 0.96rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 14px rgba(74, 132, 212, 0.1);
 }
 
 .btn-seiko-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.65rem;
   background: #dc2626;
-  border: 2px solid #ffffff;
+  border: 1.5px solid #ef4444;
   color: #ffffff !important;
-  padding: 0.95rem 3rem;
-  font-size: 1.1rem;
+  padding: 0.75rem 2.2rem;
+  font-size: 0.98rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  border-radius: 12px !important;
+  letter-spacing: 0.05em;
+  border-radius: 12px;
   text-decoration: none;
-  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.42);
+  box-shadow: 0 4px 18px rgba(220, 38, 38, 0.35);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  text-shadow: none;
 }
 
 .btn-seiko-pill:hover {
   background: #b91c1c;
-  border-color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(220, 38, 38, 0.58);
+  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.45);
   color: #ffffff !important;
+}
+
+/* 額装パノラマ写真フレーム */
+.hero-photo-frame {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero-photo-inner {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(18, 48, 92, 0.14), 0 4px 12px rgba(18, 48, 92, 0.05);
+  border: 4px solid #ffffff;
+  background-color: #dbeafe;
+  aspect-ratio: 21 / 9;
+}
+
+@media (max-width: 768px) {
+  .hero-photo-inner {
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    border-width: 3px;
+  }
+}
+
+.hero-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-photo-inner:hover .hero-photo-img {
+  transform: scale(1.025);
+}
+
+.hero-photo-badge {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  background: rgba(16, 36, 62, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.6rem 1.15rem;
+  border-radius: 10px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+}
+
+.badge-alpine {
+  font-family: var(--font-en);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #93c5fd;
+}
+
+.badge-venue {
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 3rem 0 2.5rem;
+  }
+  .hero-editorial-body {
+    margin-bottom: 2rem;
+  }
+  .hero-subtag {
+    font-size: 0.74rem;
+    padding: 0.35rem 0.9rem;
+  }
+  .hero-main-title {
+    font-size: 2.3rem;
+  }
+  .hero-info-pills {
+    border-radius: 14px;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .info-sep {
+    display: none;
+  }
+  .hero-action-row {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-host-pill,
+  .btn-seiko-pill {
+    width: 100%;
+    max-width: 320px;
+  }
+  .hero-photo-badge {
+    bottom: 0.75rem;
+    right: 0.75rem;
+    padding: 0.45rem 0.8rem;
+  }
+  .badge-alpine {
+    font-size: 0.58rem;
+  }
+  .badge-venue {
+    font-size: 0.66rem;
+  }
 }
 
 .live-indicator-dot {
@@ -789,7 +904,7 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Quick Links Cards (BAKE Cheesetart Style - Vertical Editorial Cards)
+   Quick Links Cards (Plan A - Editorial Numbering Cards 01-04)
    ========================================================================== */
 .quick-links-grid {
   display: grid;
@@ -804,70 +919,73 @@ ul, ol {
 @media (max-width: 992px) {
   .quick-links-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.4rem;
+    gap: 1.25rem;
   }
 }
 
 .quick-link-card {
   background-color: #ffffff;
-  border: 1.5px solid #dcebfa;
-  border-radius: 18px !important;
-  aspect-ratio: 1 / 1 !important;
-  padding: 1.85rem 1.45rem 1.6rem;
+  border: 1px solid #dcebfa;
+  border-radius: 20px !important;
+  padding: 2rem 1.6rem 1.8rem;
   box-shadow: 0 4px 20px rgba(18, 48, 92, 0.04);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* 上部揃えにより全カードのテキスト開始位置を水平に完全統一 */
+  justify-content: flex-start;
   text-decoration: none;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
 }
 
-.quick-link-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(130, 185, 245, 0.25);
-  border-color: #7bb2ef;
+.quick-link-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #93c5fd);
+  opacity: 0;
+  transition: opacity 0.25s ease;
 }
 
-.quick-link-top {
+.quick-link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(74, 132, 212, 0.13);
+  border-color: #b3d4fc;
+}
+
+.quick-link-card:hover::before {
+  opacity: 1;
+}
+
+.quick-link-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.25rem; /* 全カード均一なアイコンとテキストの間隔 */
+  margin-bottom: 1.25rem;
   width: 100%;
 }
 
-.quick-link-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 13px !important;
-  background: linear-gradient(135deg, #f0f7ff 0%, #e2effe 100%);
+.card-number {
+  font-family: var(--font-en);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #9ac2f8;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  transition: color 0.25s ease;
+}
+
+.quick-link-card:hover .card-number {
   color: #2563eb;
-  border: 1px solid #cce2fd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: all 0.25s ease;
 }
 
-.quick-link-card:hover .quick-link-icon {
-  background: #2563eb;
-  color: #ffffff;
-  border-color: #2563eb;
-  transform: scale(1.05);
-}
-
-.quick-link-icon svg {
-  width: 24px;
-  height: 24px;
-}
-
-.quick-link-arrow {
-  width: 32px;
-  height: 32px;
-  border-radius: 9px !important;
+.card-arrow-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
   background-color: #f4f8fe;
   color: #5a92d6;
   border: 1px solid #e1edf8;
@@ -878,17 +996,17 @@ ul, ol {
   transition: all 0.25s ease;
 }
 
-.quick-link-card:hover .quick-link-arrow {
+.quick-link-card:hover .card-arrow-icon {
   background-color: #2563eb;
   color: #ffffff;
   border-color: #2563eb;
-  transform: translateX(3px);
+  transform: translate(2px, -2px);
 }
 
 .quick-link-text {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* 上部揃え */
+  justify-content: flex-start;
   width: 100%;
 }
 
@@ -907,14 +1025,13 @@ ul, ol {
 
 .quick-link-title,
 .quick-link-text h3 {
-  font-size: clamp(1.05rem, 1.25vw, 1.16rem);
+  font-size: clamp(1.05rem, 1.25vw, 1.18rem);
   font-weight: 800;
   color: #10243e;
   margin-bottom: 0.55rem;
   letter-spacing: 0.02em;
-  line-height: 1.45;
-  word-break: auto-phrase;
-  white-space: nowrap; /* パソコン版は改行なしでスマートに1行表示 */
+  line-height: 1.4;
+  white-space: nowrap;
 }
 
 .quick-link-desc,
@@ -926,77 +1043,64 @@ ul, ol {
   margin: 0;
 }
 
-/* スマホ表示：文字が絶対に隠れない・見切れないよう余白と高さを最適化 */
 @media (max-width: 640px) {
   .quick-links-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
+    gap: 0.85rem;
     margin-top: 1.8rem;
     margin-bottom: 2.2rem;
   }
 
   .quick-link-card {
-    aspect-ratio: auto !important;
-    min-height: 185px;
-    padding: 1.15rem 0.85rem 1.1rem !important;
-    border-radius: 14px !important;
+    min-height: 175px;
+    padding: 1.25rem 0.95rem 1.15rem !important;
+    border-radius: 16px !important;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    overflow: visible !important;
   }
 
-  .quick-link-top {
-    margin-bottom: 0.65rem;
+  .quick-link-header {
+    margin-bottom: 0.75rem;
   }
 
-  .quick-link-icon {
-    width: 36px !important;
-    height: 36px !important;
-    border-radius: 9px !important;
+  .card-number {
+    font-size: 1.25rem;
   }
 
-  .quick-link-icon svg {
-    width: 18px;
-    height: 18px;
+  .card-arrow-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
   }
 
-  .quick-link-arrow {
-    display: none;
-  }
-
-  .quick-link-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
+  .card-arrow-icon svg {
+    width: 12px;
+    height: 12px;
   }
 
   .quick-link-en {
-    font-size: 0.63rem;
-    letter-spacing: 0.11em;
-    margin-bottom: 0.3rem;
-    line-height: 1.3;
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
     white-space: normal;
   }
 
   .quick-link-title,
   .quick-link-text h3 {
-    font-size: 0.96rem;
-    font-weight: 800;
+    font-size: 0.95rem;
     margin-bottom: 0.35rem;
-    line-height: 1.4;
-    white-space: normal; /* スマホでは自然な改行 */
+    line-height: 1.35;
+    white-space: normal;
   }
 
   .quick-link-desc,
   .quick-link-text p {
-    font-size: 0.73rem;
-    line-height: 1.5;
+    font-size: 0.72rem;
+    line-height: 1.45;
     color: #587394;
     display: block !important;
-    overflow: visible !important;
-    -webkit-line-clamp: unset !important;
     word-break: auto-phrase;
   }
 }
