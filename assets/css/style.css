@@ -36,11 +36,12 @@
   --color-border-subtle: #edf3fa;  /* 淡い境界線 */
   --color-border-sharp: #c5dbff;   /* BAKEパステルブルー強調境界線 */
 
-  /* Sharp Geometry - カクカクしたスタイリッシュな造形 (No rounded corners) */
-  --radius-sm: 0px;
-  --radius-md: 0px;
-  --radius-lg: 0px;
-  --radius-full: 0px;
+  /* Modern Sophisticated Geometry (BAKE Cheesetart Style - Subtle Clean Curves & Elegant Pills) */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --radius-pill: 9999px;
 
   /* Modern Light Crisp Shadows */
   --shadow-xs: 0 1px 3px rgba(197, 219, 255, 0.2);
@@ -62,7 +63,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border-radius: 0 !important; /* すべての角丸を完全排除し、シャープでカクカクした外観に統一 */
 }
 
 html {
@@ -382,7 +382,7 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Hero Section (Top Page - Translucent Mountain Overlay & Central Layout)
+   Hero Section (Top Page - Mountain Background & Razor-Sharp Central Text)
    ========================================================================== */
 .hero {
   position: relative;
@@ -395,25 +395,25 @@ ul, ol {
 .hero-alpine {
   background-image: url('../images/hero-bg.png');
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 25%;
   background-repeat: no-repeat;
-  min-height: 82vh;
-  padding: 6.5rem 1.5rem 7rem;
+  min-height: 80vh;
+  padding: 6.5rem 1.5rem 6.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 
-/* Subtle dark translucent vignette overlay so snowy peaks shine through while text is 100% crisp */
+/* ぼかし一切なしの写真そのままの透明度オーバーレイ（雪景色をくっきり残しつつ文字コントラストを最大化） */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(14, 26, 44, 0.40) 0%,
-    rgba(14, 26, 44, 0.25) 45%,
-    rgba(14, 26, 44, 0.58) 100%
+    rgba(8, 16, 28, 0.52) 0%,
+    rgba(8, 16, 28, 0.38) 45%,
+    rgba(8, 16, 28, 0.70) 100%
   );
   pointer-events: none;
 }
@@ -426,18 +426,18 @@ ul, ol {
   margin: 0 auto;
 }
 
-/* 完全中央揃え・文字すかしレイアウト (media_1790386437280.jpg 完全再現) */
+/* 完全中央揃え・くっきり高コントラストレイアウト（ぼかしゼロ） */
 .hero-translucent-body {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   color: #ffffff;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65), 0 1px 4px rgba(0, 0, 0, 0.85);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 3px 12px rgba(0, 0, 0, 0.9), 0 0 24px rgba(0, 0, 0, 0.8);
 }
 
 .hero-edition-number {
-  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-size: clamp(2.2rem, 5vw, 3rem);
   font-weight: 800;
   letter-spacing: 0.16em;
   color: #ffffff;
@@ -454,7 +454,7 @@ ul, ol {
 }
 
 .hero-tournament-name {
-  font-size: clamp(1.85rem, 4.6vw, 3.1rem);
+  font-size: clamp(1.9rem, 4.6vw, 3.2rem);
   font-weight: 900;
   letter-spacing: 0.1em;
   line-height: 1.3;
@@ -462,7 +462,7 @@ ul, ol {
 }
 
 .hero-discipline-name {
-  font-size: clamp(2.3rem, 5.8vw, 3.8rem);
+  font-size: clamp(2.4rem, 5.8vw, 4rem);
   font-weight: 900;
   letter-spacing: 0.22em;
   line-height: 1.2;
@@ -478,49 +478,47 @@ ul, ol {
 }
 
 .hero-event-dates {
-  font-size: clamp(1.2rem, 2.7vw, 1.5rem);
+  font-size: clamp(1.2rem, 2.7vw, 1.55rem);
   font-weight: 700;
   letter-spacing: 0.08em;
   color: #ffffff;
 }
 
 .hero-event-venue {
-  font-size: clamp(0.95rem, 2vw, 1.12rem);
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
   font-weight: 600;
   letter-spacing: 0.05em;
-  color: rgba(255, 255, 255, 0.95);
-  max-width: 820px;
+  color: #ffffff;
+  max-width: 840px;
   line-height: 1.6;
 }
 
-/* 主管：東京慈恵会医科大学医学部 (半透明フロストガラスカプセル枠) */
+/* 主管：東京慈恵会医科大学医学部（ぼかしゼロ・鮮明なダーク半透明プレート・白枠） */
 .hero-host-capsule {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.65rem 2.5rem;
-  background: rgba(255, 255, 255, 0.22);
-  border: 1.5px solid rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 6px;
+  background: rgba(20, 34, 52, 0.72);
+  border: 1.5px solid rgba(255, 255, 255, 0.88);
+  border-radius: var(--radius-sm);
   color: #ffffff;
-  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-size: clamp(1.05rem, 2vw, 1.15rem);
   font-weight: 700;
   letter-spacing: 0.08em;
-  margin-bottom: 1.75rem;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1.85rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
   transition: all 0.25s ease;
 }
 
 .hero-host-capsule:hover {
-  background: rgba(255, 255, 255, 0.32);
+  background: rgba(26, 44, 68, 0.85);
   border-color: #ffffff;
 }
 
-/* セイコースポーツリンク (速報ボタン・画像完全再現) */
+/* セイコースポーツリンク（ぼかしゼロ・鮮明なレッドピルボタン） */
 .hero-seiko-btn-wrap {
-  margin-bottom: 2.25rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -530,27 +528,25 @@ ul, ol {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  background: rgba(215, 62, 62, 0.88);
-  border: 1.5px solid rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: #dc2626;
+  border: 1.5px solid #ffffff;
   color: #ffffff !important;
-  padding: 0.9rem 2.6rem;
-  font-size: 1.05rem;
+  padding: 0.9rem 2.8rem;
+  font-size: 1.08rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-  border-radius: 9999px !important;
+  border-radius: var(--radius-pill);
   text-decoration: none;
-  box-shadow: 0 6px 24px rgba(215, 62, 62, 0.45);
+  box-shadow: 0 6px 22px rgba(220, 38, 38, 0.55), 0 2px 8px rgba(0, 0, 0, 0.35);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .btn-seiko-pill:hover {
-  background: rgba(235, 48, 48, 0.98);
+  background: #b91c1c;
   border-color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(215, 62, 62, 0.6);
+  box-shadow: 0 10px 28px rgba(220, 38, 38, 0.7);
   color: #ffffff !important;
 }
 
@@ -558,7 +554,7 @@ ul, ol {
   width: 9px;
   height: 9px;
   background-color: #ffffff;
-  border-radius: 50% !important;
+  border-radius: 50%;
   display: inline-block;
   box-shadow: 0 0 8px #ffffff;
   animation: liveBlink 1.8s infinite ease-in-out;
@@ -569,88 +565,54 @@ ul, ol {
   50% { opacity: 0.35; transform: scale(0.8); }
 }
 
-/* サブ導線ボタン (透明フロストガラス) */
-.hero-glass-actions {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.btn-glass-sub {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.7rem 1.6rem;
-  background: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  color: #ffffff;
-  font-size: 0.88rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-}
-
-.btn-glass-sub:hover {
-  background: rgba(255, 255, 255, 0.28);
-  border-color: #ffffff;
-  color: #ffffff;
-  transform: translateY(-1px);
-}
-
 /* ==========================================================================
-   Buttons (Sharp, Angular, Solid)
+   Buttons (BAKE Cheesetart Style - Sleek Capsule & Pill Shapes)
    ========================================================================== */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  padding: 0.85rem 1.75rem;
+  padding: 0.85rem 1.85rem;
   font-size: 0.95rem;
   font-weight: 800;
-  transition: all 0.2s ease;
+  border-radius: var(--radius-pill);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   border: none;
   text-decoration: none;
   line-height: 1;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
 .btn-primary {
-  background: var(--color-pastel-main);
-  color: #0e223d;
-  border: 1.5px solid #9ec4ff;
-  box-shadow: 0 4px 14px rgba(197, 219, 255, 0.45);
+  background: #2563eb;
+  color: #ffffff;
+  border: 1.5px solid #2563eb;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
 }
 
 .btn-primary:hover {
-  background: #b2d2fd;
-  border-color: #8bbafc;
-  color: #08162b;
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(197, 219, 255, 0.6);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
 }
 
 .btn-white {
   background-color: #ffffff;
-  color: #1a3c6c;
-  border: 1.5px solid var(--color-pastel-main);
-  box-shadow: var(--shadow-sm);
+  color: #12243d;
+  border: 1.5px solid #d8e5f7;
+  box-shadow: 0 2px 10px rgba(74, 132, 212, 0.08);
 }
 
 .btn-white:hover {
-  background-color: var(--color-pastel-ghost);
-  color: #0f2648;
-  border-color: #a8cdfd;
+  background-color: #f0f6fd;
+  color: #2563eb;
+  border-color: #8bb5e8;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 6px 18px rgba(74, 132, 212, 0.15);
 }
 
 .btn-outline-white {
@@ -666,81 +628,78 @@ ul, ol {
 
 .btn-outline-primary {
   background-color: #ffffff;
-  color: #1a3c6c;
-  border: 1.5px solid var(--color-pastel-main);
+  color: #12243d;
+  border: 1.5px solid #8bb5e8;
 }
 
 .btn-outline-primary:hover {
-  background-color: var(--color-pastel-pale);
-  border-color: #9ac2fb;
-  color: #0c1c33;
+  background-color: #8bb5e8;
+  border-color: #8bb5e8;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
 .btn-sm {
-  padding: 0.5rem 1.1rem;
-  font-size: 0.85rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.825rem;
 }
 
 /* ==========================================================================
-   Badges (Sharp Tech / Athlete Tags)
+   Badges (BAKE Cheesetart Style - Soft Pastel Capsule Pills)
    ========================================================================== */
 .badge {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.25rem 0.65rem;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   white-space: nowrap;
-  text-transform: uppercase;
+  border-radius: var(--radius-pill);
 }
 
 .badge-danger {
-  background-color: var(--color-danger-pale);
-  color: var(--color-danger);
-  border: 1px solid var(--color-danger);
-  border-left: 3px solid var(--color-danger);
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
 }
 
 .badge-info {
-  background-color: var(--color-accent-pale);
-  color: var(--color-primary);
-  border: 1px solid var(--color-primary-light);
-  border-left: 3px solid var(--color-primary);
+  background-color: #e0f2fe;
+  color: #0284c7;
+  border: 1px solid #bae6fd;
 }
 
 .badge-primary {
-  background-color: #eff6ff;
-  color: var(--color-primary);
-  border: 1px solid var(--color-border-sharp);
-  border-left: 3px solid var(--color-primary);
+  background-color: #eef6fd;
+  color: #2563eb;
+  border: 1px solid #d4e5f9;
 }
 
 .badge-gold {
-  background-color: var(--color-gold-pale);
-  color: var(--color-gold);
-  border: 1px solid var(--color-gold);
-  border-left: 3px solid var(--color-gold);
+  background-color: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
 }
 
 .badge-gray {
   background-color: #f1f5f9;
-  color: var(--color-text-muted);
-  border: 1px solid var(--color-border);
+  color: #64748b;
+  border: 1px solid #e2e8f0;
 }
 
 /* ==========================================================================
-   Section Common (Sharp Clean Style)
+   Section Common (BAKE Cheesetart Style - Clean Airy Spacing & Elegant Headers)
    ========================================================================== */
 .section {
-  padding: 4.5rem 0;
+  padding: 5rem 0;
 }
 
 .section-alt {
-  background-color: #ffffff;
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  background-color: #f8fbfe;
+  border-top: 1px solid #e5effa;
+  border-bottom: 1px solid #e5effa;
 }
 
 .section-header {
@@ -748,7 +707,7 @@ ul, ol {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .section-header-left {
@@ -758,17 +717,17 @@ ul, ol {
 
 .section-tag {
   font-family: var(--font-en);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 800;
-  letter-spacing: 0.2em;
-  color: var(--color-primary);
+  letter-spacing: 0.28em;
+  color: #5a94e0;
   text-transform: uppercase;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.4rem;
 }
 
 .section-title {
-  font-size: 2rem;
-  font-weight: 900;
+  font-size: clamp(1.8rem, 3.8vw, 2.3rem);
+  font-weight: 800;
   color: #12243d;
   position: relative;
   letter-spacing: 0.06em;
@@ -777,73 +736,75 @@ ul, ol {
 .section-title::after {
   content: "";
   display: block;
-  width: 44px;
-  height: 3px;
-  background-color: var(--color-pastel-main);
-  margin: 0.75rem auto 0;
+  width: 36px;
+  height: 2px;
+  background-color: #96c0ee;
+  margin: 0.9rem auto 0;
+  border-radius: 2px;
 }
 
 .section-header-left .section-title::after {
-  margin: 0.75rem 0 0;
+  margin: 0.9rem 0 0;
 }
 
 .section-desc {
-  color: var(--color-text-muted);
+  color: #647e9e;
   font-size: 0.95rem;
   margin-top: 0.75rem;
-  max-width: 620px;
+  max-width: 640px;
+  line-height: 1.65;
 }
 
 /* ==========================================================================
-   Quick Links Cards (Top Page - Sharp Square Cards)
+   Quick Links Cards (BAKE Cheesetart Style - Rounded White Cards with Pastel Hover)
    ========================================================================== */
 .quick-links-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
   margin-top: 3.5rem;
   position: relative;
   z-index: 10;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 
 .quick-link-card {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-top: 3px solid var(--color-pastel-main);
-  padding: 1.6rem 1.5rem;
-  box-shadow: var(--shadow-sm);
+  background-color: #ffffff;
+  border: 1px solid #e1edf8;
+  border-radius: var(--radius-lg);
+  padding: 1.8rem 1.6rem;
+  box-shadow: 0 4px 18px rgba(18, 36, 61, 0.04);
   display: flex;
   align-items: center;
   gap: 1.25rem;
   text-decoration: none;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
 }
 
 .quick-link-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(197, 219, 255, 0.4);
-  border-top-color: #8bbafc;
-  border-color: #c5dbff;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(140, 185, 235, 0.28);
+  border-color: #89b4e9;
 }
 
 .quick-link-icon {
   width: 52px;
   height: 52px;
-  background-color: var(--color-pastel-pale);
-  border: 1px solid var(--color-border);
-  color: #2b5b9c;
+  border-radius: var(--radius-md);
+  background-color: #eef5fc;
+  color: #2563eb;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .quick-link-card:hover .quick-link-icon {
-  background-color: var(--color-pastel-main);
-  color: #0d213d;
-  border-color: var(--color-pastel-main);
+  background-color: #2563eb;
+  color: #ffffff;
 }
 
 .quick-link-icon svg {
@@ -851,37 +812,72 @@ ul, ol {
   height: 26px;
 }
 
-.quick-link-text h3 {
-  font-size: 1.05rem;
+.quick-link-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.quick-link-en {
+  font-family: var(--font-en);
+  font-size: 0.7rem;
   font-weight: 800;
-  color: var(--color-primary-dark);
-  margin-bottom: 0.2rem;
+  letter-spacing: 0.22em;
+  color: #6296d4;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.quick-link-text h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #12243d;
+  margin-bottom: 0.3rem;
   letter-spacing: 0.02em;
 }
 
 .quick-link-text p {
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
-  line-height: 1.4;
+  font-size: 0.825rem;
+  color: #647e9e;
+  line-height: 1.5;
+}
+
+.quick-link-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f4f8fe;
+  color: #6296d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.quick-link-card:hover .quick-link-arrow {
+  background-color: #2563eb;
+  color: #ffffff;
+  transform: translateX(3px);
 }
 
 /* ==========================================================================
-   News Component (Top & News Page)
+   News Component (BAKE Cheesetart Editorial Style)
    ========================================================================== */
 .news-list {
-  background-color: var(--color-surface);
-  box-shadow: var(--shadow-xs);
-  border: 1px solid var(--color-border);
-  border-top: 3px solid var(--color-pastel-main);
+  background-color: #ffffff;
+  border: 1px solid #e1edf8;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(18, 36, 61, 0.03);
 }
 
 .news-item {
   display: flex;
-  align-items: flex-start;
-  padding: 1.25rem 1.75rem;
-  border-bottom: 1px solid var(--color-border-subtle);
-  border-left: 4px solid transparent;
-  gap: 1.25rem;
+  align-items: center;
+  padding: 1.35rem 2rem;
+  border-bottom: 1px solid #f0f5fb;
+  gap: 1.5rem;
   text-decoration: none;
   transition: all 0.2s ease;
 }
@@ -891,22 +887,21 @@ ul, ol {
 }
 
 .news-item:hover {
-  background-color: var(--color-surface-alt);
-  border-left-color: var(--color-primary-light);
+  background-color: #f7faff;
 }
 
 .news-meta {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.75rem;
   min-width: 220px;
   flex-shrink: 0;
 }
 
 .news-date {
   font-family: var(--font-en);
-  font-size: 0.875rem;
-  color: var(--color-primary);
+  font-size: 0.88rem;
+  color: #647e9e;
   font-weight: 700;
 }
 
@@ -915,54 +910,101 @@ ul, ol {
 }
 
 .news-title {
-  font-size: 1.025rem;
+  font-size: 1.02rem;
   font-weight: 700;
-  color: var(--color-text);
+  color: #12243d;
   line-height: 1.5;
   transition: color 0.2s;
 }
 
 .news-item:hover .news-title {
-  color: var(--color-primary);
+  color: #2563eb;
 }
 
 .news-excerpt {
-  font-size: 0.875rem;
-  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  color: #647e9e;
   margin-top: 0.35rem;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .news-arrow {
-  color: var(--color-text-light);
-  margin-left: auto;
-  align-self: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f4f8fe;
+  color: #6296d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .news-item:hover .news-arrow {
-  color: var(--color-primary);
-  transform: translateX(4px);
+  background-color: #2563eb;
+  color: #ffffff;
+  transform: translateX(3px);
 }
 
 .news-more-wrap {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 2.25rem;
 }
 
-/* 重要フラグON時の赤い背景強調スタイル（角丸なし・シャープなレッドアクセント） */
+/* BAKE Cheesetart Signature Pill Button */
+.btn-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.9rem 2.8rem;
+  border-radius: var(--radius-pill);
+  background-color: #ffffff;
+  border: 1.5px solid #8bb5e8;
+  color: #12243d;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(139, 181, 232, 0.18);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-capsule:hover {
+  background-color: #8bb5e8;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(139, 181, 232, 0.35);
+}
+
+.btn-circle-arrow {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #eef5fc;
+  color: #2563eb;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.btn-capsule:hover .btn-circle-arrow {
+  background-color: #ffffff;
+  color: #2563eb;
+  transform: translateX(2px);
+}
+
+/* 重要フラグON時 */
 .news-item.news-item-important {
-  background-color: #fff5f5;
-  background: linear-gradient(90deg, #fff1f2 0%, #ffffff 100%);
-  border-left: 5px solid var(--color-danger);
-  box-shadow: 0 2px 8px rgba(230, 57, 70, 0.08);
+  background: linear-gradient(90deg, #fff7f7 0%, #ffffff 100%);
+  border-left: 4px solid #ef4444;
 }
 
 .news-item.news-item-important:hover {
-  background-color: #fee2e2;
-  background: linear-gradient(90deg, #fee2e2 0%, #fff1f2 100%);
-  border-left-color: #b91c1c;
+  background: linear-gradient(90deg, #fee2e2 0%, #fff7f7 100%);
 }
 
 .news-item.news-item-important .news-title {
@@ -981,6 +1023,7 @@ ul, ol {
   font-size: 0.95rem;
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
 }
 
 .loading-spinner {
@@ -988,7 +1031,7 @@ ul, ol {
   height: 24px;
   border: 3px solid var(--color-border);
   border-top-color: var(--color-primary);
-  border-radius: 50% !important; /* スピナーのみ円形 */
+  border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
 
@@ -1008,6 +1051,7 @@ ul, ol {
   align-items: center;
   gap: 0.6rem;
   font-weight: 600;
+  border-radius: var(--radius-sm);
 }
 
 .api-status-notice.fallback {
@@ -1029,13 +1073,14 @@ ul, ol {
   color: var(--color-text-muted);
   background-color: var(--color-surface);
   border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
 }
 
-/* News Category Tabs (news.html - Sharp Rectangular Buttons) */
+/* News Category Tabs (news.html - BAKE Capsule Pills) */
 .filter-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.6rem;
   margin-bottom: 2rem;
   justify-content: center;
 }
@@ -1044,85 +1089,94 @@ ul, ol {
   padding: 0.65rem 1.4rem;
   font-size: 0.875rem;
   font-weight: 700;
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border-sharp);
-  color: var(--color-text);
+  background-color: #ffffff;
+  border: 1px solid #d8e5f7;
+  color: #12243d;
   cursor: pointer;
+  border-radius: var(--radius-pill);
   transition: all 0.2s ease;
   letter-spacing: 0.03em;
 }
 
 .filter-btn:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-  background-color: var(--color-surface-alt);
+  border-color: #8bb5e8;
+  color: #2563eb;
+  background-color: #f0f6fd;
 }
 
 .filter-btn.active {
-  background-color: var(--color-pastel-main);
-  color: #0e223d;
-  border-color: #9ec4ff;
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
   font-weight: 800;
-  box-shadow: 0 2px 10px rgba(197, 219, 255, 0.45);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
 }
 
 /* ==========================================================================
-   Overview Cards (Top Page - Sharp Square Cards)
+   Overview Cards (BAKE Cheesetart Style - Minimalist Editorial Cards & Table)
    ========================================================================== */
 .overview-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
 }
 
 .overview-card {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-top: 3px solid var(--color-pastel-main);
-  padding: 1.75rem;
-  box-shadow: var(--shadow-sm);
+  background-color: #ffffff;
+  border: 1px solid #e1edf8;
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.2rem;
+  box-shadow: 0 4px 20px rgba(18, 36, 61, 0.03);
   display: flex;
   flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.overview-card:hover {
+  box-shadow: 0 12px 30px rgba(140, 185, 235, 0.2);
+  border-color: #c5dbff;
 }
 
 .overview-card-header {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.9rem;
   margin-bottom: 1.25rem;
-  border-bottom: 1px solid var(--color-border);
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid #eef4fb;
 }
 
 .overview-icon {
-  width: 40px;
-  height: 40px;
-  background-color: var(--color-pastel-pale);
-  color: #2b5b9c;
-  border: 1px solid var(--color-border-sharp);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background-color: #eef5fc;
+  color: #2563eb;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .overview-icon svg {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
 }
 
 .overview-card-header h3 {
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   font-weight: 800;
-  color: var(--color-primary-dark);
+  color: #12243d;
+  letter-spacing: 0.04em;
 }
 
 .overview-table {
   width: 100%;
-  font-size: 0.925rem;
+  border-collapse: collapse;
 }
 
 .overview-table tr {
-  border-bottom: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid #f1f5f9;
 }
 
 .overview-table tr:last-child {
@@ -1130,18 +1184,21 @@ ul, ol {
 }
 
 .overview-table th {
-  text-align: left;
-  padding: 0.75rem 0.5rem 0.75rem 0;
-  color: var(--color-primary-dark);
+  width: 125px;
+  padding: 1rem 0;
+  font-size: 0.88rem;
   font-weight: 700;
-  width: 32%;
+  color: #647e9e;
+  text-align: left;
   vertical-align: top;
 }
 
 .overview-table td {
-  padding: 0.75rem 0;
-  color: var(--color-text);
-  font-weight: 500;
+  padding: 1rem 0 1rem 0.5rem;
+  font-size: 0.93rem;
+  color: #12243d;
+  line-height: 1.65;
+  vertical-align: top;
 }
 
 /* ==========================================================================
@@ -1176,41 +1233,43 @@ ul, ol {
 .doc-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .doc-card {
   background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-left: 4px solid var(--color-primary);
-  padding: 1.25rem;
-  box-shadow: var(--shadow-xs);
+  border: 1px solid #e1edf8;
+  border-top: 3px solid #7facf0;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: 0 4px 18px rgba(18, 36, 61, 0.04);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .doc-card:hover {
   transform: translateY(-3px);
-  border-color: var(--color-primary);
-  box-shadow: var(--shadow-md);
+  border-color: #89b4e9;
+  box-shadow: 0 12px 30px rgba(140, 185, 235, 0.25);
 }
 
 .doc-card-top {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .file-badge {
-  padding: 0.35rem 0.65rem;
+  padding: 0.35rem 0.75rem;
   font-family: var(--font-en);
   font-size: 0.75rem;
   font-weight: 800;
   flex-shrink: 0;
   letter-spacing: 0.05em;
+  border-radius: var(--radius-pill);
 }
 
 .file-badge.pdf {
@@ -1226,16 +1285,16 @@ ul, ol {
 }
 
 .doc-info h4 {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 800;
-  color: var(--color-primary-dark);
+  color: #12243d;
   line-height: 1.4;
   margin-bottom: 0.35rem;
 }
 
 .doc-info p {
-  font-size: 0.825rem;
-  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  color: #647e9e;
   line-height: 1.5;
 }
 
@@ -1243,31 +1302,35 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.85rem;
-  border-top: 1px solid var(--color-border-subtle);
+  padding-top: 1rem;
+  border-top: 1px solid #eef4fb;
 }
 
 .doc-meta {
   font-size: 0.775rem;
-  color: var(--color-text-muted);
+  color: #647e9e;
   font-weight: 600;
 }
 
 .doc-download-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
   font-size: 0.85rem;
   font-weight: 700;
   color: #ffffff;
-  padding: 0.45rem 0.9rem;
-  background-color: var(--color-primary);
+  padding: 0.55rem 1.2rem;
+  background-color: #2563eb;
+  border-radius: var(--radius-pill);
   transition: all 0.2s ease;
+  text-decoration: none;
 }
 
 .doc-download-btn:hover {
-  background-color: var(--color-primary-light);
+  background-color: #1d4ed8;
   color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
 }
 
 .doc-download-btn svg {
@@ -1276,13 +1339,14 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Schedule Page (schedule.html - Sharp Table)
+   Schedule Page (schedule.html - Modern Airy Tables)
    ========================================================================== */
 .schedule-table-wrap {
   background-color: var(--color-surface);
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--color-border);
-  border-top: 3px solid var(--color-pastel-main);
+  box-shadow: 0 4px 20px rgba(18, 36, 61, 0.04);
+  border: 1px solid #e1edf8;
+  border-top: 3px solid #7facf0;
+  border-radius: var(--radius-lg);
   overflow-x: auto;
   margin-bottom: 2.5rem;
 }
@@ -1295,18 +1359,18 @@ ul, ol {
 }
 
 .schedule-table th {
-  background-color: var(--color-surface-alt);
+  background-color: #f8fbfe;
   color: #12243d;
   font-weight: 800;
-  padding: 1rem 1.25rem;
-  border-bottom: 2px solid var(--color-border-sharp);
+  padding: 1.1rem 1.25rem;
+  border-bottom: 2px solid #e1edf8;
   font-size: 0.925rem;
   letter-spacing: 0.03em;
 }
 
 .schedule-table td {
   padding: 1.1rem 1.25rem;
-  border-bottom: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid #f0f5fb;
   font-size: 0.925rem;
   vertical-align: middle;
 }
@@ -1316,37 +1380,39 @@ ul, ol {
 }
 
 .schedule-table tr:hover td {
-  background-color: #f8fbfe;
+  background-color: #f7faff;
 }
 
 .schedule-day-badge {
   display: inline-block;
-  padding: 0.25rem 0.65rem;
-  background-color: var(--color-pastel-main);
-  color: #0f2444;
+  padding: 0.25rem 0.75rem;
+  background-color: #eef6fd;
+  color: #2563eb;
   font-weight: 800;
   font-size: 0.8rem;
   letter-spacing: 0.05em;
-  border: 1px solid #9ec4ff;
+  border: 1px solid #d4e5f9;
+  border-radius: var(--radius-pill);
 }
 
 .schedule-event-title {
   font-weight: 800;
-  color: var(--color-primary-dark);
+  color: #12243d;
 }
 
 .schedule-event-detail {
   font-size: 0.825rem;
-  color: var(--color-text-muted);
+  color: #647e9e;
   margin-top: 0.2rem;
 }
 
 .venue-card {
   background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-left: 4px solid var(--color-primary);
+  border: 1px solid #e1edf8;
+  border-left: 4px solid #2563eb;
+  border-radius: var(--radius-lg);
   padding: 1.75rem;
-  box-shadow: var(--shadow-xs);
+  box-shadow: 0 4px 18px rgba(18, 36, 61, 0.04);
 }
 
 .venue-header {
@@ -1359,14 +1425,14 @@ ul, ol {
 .venue-header h3 {
   font-size: 1.25rem;
   font-weight: 800;
-  color: var(--color-primary-dark);
+  color: #12243d;
 }
 
 /* ==========================================================================
-   Results Page (results.html - Sharp Modern Cards)
+   Results Page (results.html - Modern Rounded Cards)
    ========================================================================== */
 .results-hero-banner {
-  background: linear-gradient(135deg, #c5dbff 0%, #dbe8fd 60%, #edf4ff 100%);
+  background: linear-gradient(135deg, #d8e8fc 0%, #eaf2fc 60%, #f6faff 100%);
   padding: 2.25rem 2.5rem;
   color: #12243d;
   margin-bottom: 2.5rem;
@@ -1375,8 +1441,9 @@ ul, ol {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1.5rem;
-  border-left: 5px solid var(--color-pastel-main);
-  box-shadow: var(--shadow-sm);
+  border-left: 5px solid #2563eb;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 18px rgba(18, 36, 61, 0.04);
 }
 
 .results-hero-banner h3 {
@@ -1405,31 +1472,32 @@ ul, ol {
   gap: 0.65rem;
   margin-bottom: 1.25rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--color-pastel-main);
+  border-bottom: 2px solid #e1edf8;
 }
 
 .result-cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .result-card {
   background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-top: 3px solid var(--color-pastel-main);
-  padding: 1.5rem;
-  box-shadow: var(--shadow-xs);
+  border: 1px solid #e1edf8;
+  border-top: 3px solid #7facf0;
+  border-radius: var(--radius-lg);
+  padding: 1.6rem;
+  box-shadow: 0 4px 18px rgba(18, 36, 61, 0.04);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .result-card:hover {
   transform: translateY(-3px);
-  border-color: #a8cdfd;
-  box-shadow: 0 10px 25px rgba(197, 219, 255, 0.4);
+  border-color: #89b4e9;
+  box-shadow: 0 12px 30px rgba(140, 185, 235, 0.25);
 }
 
 .result-card-top {
@@ -1446,20 +1514,21 @@ ul, ol {
 .result-title {
   font-size: 1.15rem;
   font-weight: 800;
-  color: var(--color-primary-dark);
+  color: #12243d;
 }
 
 .result-meta-info {
   font-size: 0.825rem;
-  color: var(--color-text-muted);
+  color: #647e9e;
 }
 
 .podium-preview {
   margin-top: 0.85rem;
-  padding: 0.75rem;
-  background-color: var(--color-surface-alt);
-  border: 1px solid var(--color-border);
-  border-left: 3px solid var(--color-primary-light);
+  padding: 0.85rem;
+  background-color: #f8fbfe;
+  border: 1px solid #e1edf8;
+  border-left: 3px solid #2563eb;
+  border-radius: var(--radius-sm);
   font-size: 0.85rem;
 }
 
@@ -1486,7 +1555,7 @@ ul, ol {
 }
 
 .podium-school {
-  color: var(--color-text-muted);
+  color: #647e9e;
   font-size: 0.8rem;
   margin-left: auto;
 }
@@ -1496,21 +1565,21 @@ ul, ol {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: var(--color-pastel-main);
-  color: #0e223d;
+  background: #2563eb;
+  color: #ffffff;
   padding: 0.75rem 1.25rem;
   font-size: 0.9rem;
   font-weight: 800;
+  border-radius: var(--radius-pill);
   transition: all 0.2s ease;
   letter-spacing: 0.03em;
-  border: 1px solid #9ec4ff;
+  text-decoration: none;
 }
 
 .result-download-btn:hover {
-  background: #b2d2fd;
-  color: #08162b;
-  border-color: #8bbafc;
-  box-shadow: 0 4px 14px rgba(197, 219, 255, 0.5);
+  background: #1d4ed8;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
 }
 
 .result-download-btn svg {
