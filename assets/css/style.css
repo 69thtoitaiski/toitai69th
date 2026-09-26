@@ -82,6 +82,17 @@ body {
   flex-direction: column;
 }
 
+/* 自然な改行と日本語組版のためのユーティリティ */
+.text-nowrap {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+h1, h2, h3, h4, h5, .hero-translucent-body, .quick-link-text, .section-desc, .news-title {
+  word-break: auto-phrase;
+  overflow-wrap: break-word;
+}
+
 a {
   color: var(--color-primary);
   text-decoration: none;
@@ -142,20 +153,25 @@ ul, ol {
 .brand-icon {
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
+  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 119, 204, 0.3);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
   flex-shrink: 0;
-  border-left: 3px solid var(--color-accent-light);
+  transition: all 0.25s ease;
+}
+
+.site-brand:hover .brand-icon {
+  transform: translateY(-1px) scale(1.04);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
 }
 
 .brand-icon svg {
   width: 24px;
   height: 24px;
-  fill: currentColor;
 }
 
 .brand-text {
@@ -167,8 +183,9 @@ ul, ol {
   font-size: 1.2rem;
   font-weight: 800;
   letter-spacing: 0.05em;
-  color: var(--color-primary);
+  color: #12243d;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .brand-subtitle {
@@ -489,8 +506,31 @@ ul, ol {
   font-weight: 600;
   letter-spacing: 0.05em;
   color: #ffffff;
-  max-width: 840px;
-  line-height: 1.6;
+  max-width: 860px;
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.venue-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.65rem;
+}
+
+.venue-pref {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.venue-sep {
+  opacity: 0.65;
+  font-weight: 300;
+  padding: 0 0.2rem;
 }
 
 /* 主管：東京慈恵会医科大学医学部（ぼかしゼロ・鮮明なダーク半透明プレート・白枠） */
@@ -756,11 +796,11 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Quick Links Cards (BAKE Cheesetart Style - Rounded White Cards with Pastel Hover)
+   Quick Links Cards (BAKE Cheesetart Style - Vertical Editorial Cards)
    ========================================================================== */
 .quick-links-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
   margin-top: 3.5rem;
   position: relative;
@@ -772,11 +812,10 @@ ul, ol {
   background-color: #ffffff;
   border: 1px solid #e1edf8;
   border-radius: var(--radius-lg);
-  padding: 1.8rem 1.6rem;
+  padding: 1.85rem 1.65rem 1.75rem;
   box-shadow: 0 4px 18px rgba(18, 36, 61, 0.04);
   display: flex;
-  align-items: center;
-  gap: 1.25rem;
+  flex-direction: column;
   text-decoration: none;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
@@ -784,17 +823,26 @@ ul, ol {
 }
 
 .quick-link-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   box-shadow: 0 16px 36px rgba(140, 185, 235, 0.28);
   border-color: #89b4e9;
 }
 
+.quick-link-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.35rem;
+  width: 100%;
+}
+
 .quick-link-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-md);
-  background-color: #eef5fc;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #eef6fd;
   color: #2563eb;
+  border: 1px solid #dbeafe;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -805,41 +853,13 @@ ul, ol {
 .quick-link-card:hover .quick-link-icon {
   background-color: #2563eb;
   color: #ffffff;
+  border-color: #2563eb;
+  transform: scale(1.08);
 }
 
 .quick-link-icon svg {
-  width: 26px;
-  height: 26px;
-}
-
-.quick-link-text {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.quick-link-en {
-  font-family: var(--font-en);
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.22em;
-  color: #6296d4;
-  text-transform: uppercase;
-  margin-bottom: 0.25rem;
-}
-
-.quick-link-text h3 {
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: #12243d;
-  margin-bottom: 0.3rem;
-  letter-spacing: 0.02em;
-}
-
-.quick-link-text p {
-  font-size: 0.825rem;
-  color: #647e9e;
-  line-height: 1.5;
+  width: 24px;
+  height: 24px;
 }
 
 .quick-link-arrow {
@@ -859,6 +879,42 @@ ul, ol {
   background-color: #2563eb;
   color: #ffffff;
   transform: translateX(3px);
+}
+
+.quick-link-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.quick-link-en {
+  font-family: var(--font-en);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: #5a94e0;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.quick-link-title,
+.quick-link-text h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #12243d;
+  margin-bottom: 0.45rem;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  word-break: auto-phrase;
+}
+
+.quick-link-desc,
+.quick-link-text p {
+  font-size: 0.85rem;
+  color: #647e9e;
+  line-height: 1.6;
+  word-break: auto-phrase;
 }
 
 /* ==========================================================================
@@ -1149,9 +1205,10 @@ ul, ol {
 .overview-icon {
   width: 44px;
   height: 44px;
-  border-radius: var(--radius-sm);
+  border-radius: 50%;
   background-color: #eef5fc;
   color: #2563eb;
+  border: 1px solid #dbeafe;
   display: flex;
   align-items: center;
   justify-content: center;

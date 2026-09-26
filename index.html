@@ -18,9 +18,10 @@
     <div class="container header-inner">
       <a href="index.html" class="site-brand">
         <div class="brand-icon">
-          <!-- スキーヤー / マウンテン アイコン -->
-          <svg viewBox="0 0 24 24">
-            <path d="M14 6l-3.8 5.7 1.6 1.6 3.2-4.8c.4-.6 1.2-.7 1.8-.3.6.4.7 1.2.3 1.8l-4 6-5.8-5.8 1.4-1.4 3.7 3.7 2.1-3.2L12 8c-.6-.6-1.5-.7-2.1-.2L3 13.5l1.4 1.4 6.1-5.1 4.5 4.5c.3.3.7.5 1.1.5.3 0 .6-.1.8-.2l5-7.5c.8-1.2.5-2.8-.7-3.6-1.2-.8-2.8-.5-3.6.7zM7 5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
+          <!-- スキー＆マウンテン アイコン -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 3l4 8 5-5 5 15H2L8 3z"></path>
+            <path d="M4 14l4-4 4 4"></path>
           </svg>
         </div>
         <div class="brand-text">
@@ -92,25 +93,38 @@
         <div class="hero-translucent-body">
           <p class="hero-edition-number">第69回</p>
           <div class="hero-titles-wrap">
-            <h1 class="hero-tournament-name">東日本医科学生総合体育大会</h1>
+            <h1 class="hero-tournament-name">
+              <span class="text-nowrap">東日本医科学生</span><span class="text-nowrap">総合体育大会</span>
+            </h1>
             <h2 class="hero-discipline-name">スキー競技</h2>
           </div>
 
           <div class="hero-meta-block">
-            <p class="hero-event-dates">2027年3月2日(火) 〜 3月10日(水)</p>
-            <p class="hero-event-venue">開催地：長野県 White Resort 白馬さのさかスキー場 / 白馬クロスカントリー競技場スノーハープ</p>
+            <p class="hero-event-dates">
+              <span class="text-nowrap">2027年3月2日(火)</span> <span class="venue-sep">〜</span> <span class="text-nowrap">3月10日(水)</span>
+            </p>
+            <p class="hero-event-venue">
+              <span class="venue-line">
+                <span class="venue-pref text-nowrap">開催地：長野県 白馬村</span>
+              </span>
+              <span class="venue-line">
+                <span class="venue-item text-nowrap">White Resort 白馬さのさか</span>
+                <span class="venue-sep">/</span>
+                <span class="venue-item text-nowrap">白馬クロスカントリー競技場スノーハープ</span>
+              </span>
+            </p>
           </div>
 
-          <!-- 主管（半透明フロストガラス枠） -->
+          <!-- 主管（半透明プレート枠） -->
           <div class="hero-host-capsule">
-            主管：東京慈恵会医科大学医学部
+            <span class="text-nowrap">主管：東京慈恵会医科大学医学部</span>
           </div>
 
           <!-- セイコースポーツリンク (速報ボタン・画像完全再現) -->
           <div class="hero-seiko-btn-wrap">
             <a href="https://seikosportslink.com/" target="_blank" rel="noopener noreferrer" class="btn-seiko-pill">
               <span class="live-indicator-dot"></span>
-              <span>SEIKO Sports Link (速報)</span>
+              <span class="text-nowrap">SEIKO Sports Link (速報)</span>
             </a>
           </div>
         </div>
@@ -121,59 +135,93 @@
     <div class="container">
       <div class="quick-links-grid">
         <a href="documents.html" class="quick-link-card">
-          <div class="quick-link-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <div class="quick-link-top">
+            <div class="quick-link-icon">
+              <!-- 大会要項・書類 アイコン -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <line x1="10" y1="9" x2="8" y2="9"></line>
+              </svg>
+            </div>
+            <span class="quick-link-arrow">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </span>
           </div>
           <div class="quick-link-text">
             <span class="quick-link-en">GUIDELINES &amp; DOCS</span>
-            <h3>大会要項・書類</h3>
-            <p>実施要綱・エントリーシート各種様式</p>
+            <h3 class="quick-link-title">大会要項・書類</h3>
+            <p class="quick-link-desc">実施要綱・エントリーシート各種様式</p>
           </div>
-          <span class="quick-link-arrow">
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-          </span>
         </a>
 
         <a href="schedule.html" class="quick-link-card">
-          <div class="quick-link-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <div class="quick-link-top">
+            <div class="quick-link-icon">
+              <!-- 競技日程 アイコン -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+                <polyline points="12 14 12 17 15 17"></polyline>
+              </svg>
+            </div>
+            <span class="quick-link-arrow">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </span>
           </div>
           <div class="quick-link-text">
             <span class="quick-link-en">COMPETITION SCHEDULE</span>
-            <h3>競技日程・時間</h3>
-            <p>白馬会場 3/2〜3/10 タイムテーブル</p>
+            <h3 class="quick-link-title">競技日程・時間</h3>
+            <p class="quick-link-desc">白馬会場 3/2〜3/10 タイムテーブル</p>
           </div>
-          <span class="quick-link-arrow">
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-          </span>
         </a>
 
         <a href="results.html" class="quick-link-card">
-          <div class="quick-link-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+          <div class="quick-link-top">
+            <div class="quick-link-icon">
+              <!-- 大会結果（トロフィー） アイコン -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                <path d="M4 22h16"></path>
+                <path d="M10 14.66V17c0 .55-.45 1-1 1H8v4h8v-4h-1c-.55 0-1-.45-1-1v-2.34"></path>
+                <path d="M18 4H6v7a6 6 0 0 0 12 0V4z"></path>
+              </svg>
+            </div>
+            <span class="quick-link-arrow">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </span>
           </div>
           <div class="quick-link-text">
             <span class="quick-link-en">OFFICIAL RESULTS</span>
-            <h3>大会結果（リザルト）</h3>
-            <p>速報・確定リザルトPDF一覧</p>
+            <h3 class="quick-link-title">大会結果（リザルト）</h3>
+            <p class="quick-link-desc">速報・確定リザルトPDF一覧</p>
           </div>
-          <span class="quick-link-arrow">
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-          </span>
         </a>
 
         <a href="documents.html#courses" class="quick-link-card">
-          <div class="quick-link-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+          <div class="quick-link-top">
+            <div class="quick-link-icon">
+              <!-- コースマップ アイコン -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                <line x1="8" y1="2" x2="8" y2="18"></line>
+                <line x1="16" y1="6" x2="16" y2="22"></line>
+              </svg>
+            </div>
+            <span class="quick-link-arrow">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </span>
           </div>
           <div class="quick-link-text">
             <span class="quick-link-en">HAKUBA COURSE MAP</span>
-            <h3>白馬コースマップ</h3>
-            <p>さのさか / スノーハープ会場図</p>
+            <h3 class="quick-link-title">白馬コースマップ</h3>
+            <p class="quick-link-desc">さのさか / スノーハープ会場図</p>
           </div>
-          <span class="quick-link-arrow">
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-          </span>
         </a>
       </div>
     </div>
@@ -275,7 +323,12 @@
           <div class="overview-card">
             <div class="overview-card-header">
               <div class="overview-icon">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
               </div>
               <h3>大会概要・組織</h3>
             </div>
@@ -305,7 +358,12 @@
           <div class="overview-card">
             <div class="overview-card-header">
               <div class="overview-icon">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="3" ry="3"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
               </div>
               <h3>会期および会場</h3>
             </div>
@@ -313,7 +371,7 @@
               <tbody>
                 <tr>
                   <th>開催期日</th>
-                  <td><strong>2027年3月2日(火) 〜 3月10日(水)</strong>（9日間）</td>
+                  <td><strong class="text-nowrap">2027年3月2日(火) 〜 3月10日(水)</strong>（9日間）</td>
                 </tr>
                 <tr>
                   <th>開催地</th>
@@ -321,15 +379,15 @@
                 </tr>
                 <tr>
                   <th>アルペン会場</th>
-                  <td><strong>White Resort 白馬さのさか</strong>（特設GS / SLコース）</td>
+                  <td><strong>White Resort 白馬さのさか</strong><br><span style="font-size: 0.85rem; color: var(--color-text-muted);">（特設GS / SLコース）</span></td>
                 </tr>
                 <tr>
                   <th>クロカン会場</th>
-                  <td><strong>白馬クロスカントリー競技場 (スノーハープ)</strong></td>
+                  <td><strong>白馬クロスカントリー競技場</strong><br><span style="font-size: 0.85rem; color: var(--color-text-muted);">（スノーハープ）</span></td>
                 </tr>
                 <tr>
                   <th>開会式・本部</th>
-                  <td>白馬村特設会場（白馬村ウイング21 / さのさか本部）</td>
+                  <td>白馬村特設会場<br><span style="font-size: 0.85rem; color: var(--color-text-muted);">（白馬村ウイング21 / さのさか本部）</span></td>
                 </tr>
               </tbody>
             </table>
@@ -339,7 +397,10 @@
           <div class="overview-card">
             <div class="overview-card-header">
               <div class="overview-icon">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                  <line x1="4" y1="22" x2="4" y2="15"></line>
+                </svg>
               </div>
               <h3>実施競技種目</h3>
             </div>
@@ -374,60 +435,86 @@
         </div>
 
         <div class="quick-links-grid" style="margin-top: 0;">
+          <!-- リソース1: 参加誓約書・様式 -->
           <a href="documents.html" class="quick-link-card">
-            <div class="quick-link-icon">
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <div class="quick-link-top">
+              <div class="quick-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                  <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                  <path d="M9 14l2 2 4-4"></path>
+                </svg>
+              </div>
+              <span class="quick-link-arrow">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </span>
             </div>
             <div class="quick-link-text">
               <span class="quick-link-en">REQUIRED FORMS</span>
-              <h3>参加誓約書・健康調査票</h3>
-              <p>選手全員の提出が必須の指定様式</p>
+              <h3 class="quick-link-title">参加誓約書・健康調査票</h3>
+              <p class="quick-link-desc">選手全員の提出が必須の指定様式</p>
             </div>
-            <span class="quick-link-arrow">
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-            </span>
           </a>
 
+          <!-- リソース2: 会場アクセス・駐車場 -->
           <a href="schedule.html#access" class="quick-link-card">
-            <div class="quick-link-icon">
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+            <div class="quick-link-top">
+              <div class="quick-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <span class="quick-link-arrow">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </span>
             </div>
             <div class="quick-link-text">
               <span class="quick-link-en">ACCESS &amp; PARKING</span>
-              <h3>会場アクセス・駐車場</h3>
-              <p>白馬さのさか / スノーハープ交通案内</p>
+              <h3 class="quick-link-title">会場アクセス・駐車場</h3>
+              <p class="quick-link-desc">さのさか / スノーハープ交通案内</p>
             </div>
-            <span class="quick-link-arrow">
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-            </span>
           </a>
 
+          <!-- リソース3: 歴代大会記録 -->
           <a href="results.html#archive" class="quick-link-card">
-            <div class="quick-link-icon">
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+            <div class="quick-link-top">
+              <div class="quick-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="6"></circle>
+                  <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                </svg>
+              </div>
+              <span class="quick-link-arrow">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </span>
             </div>
             <div class="quick-link-text">
               <span class="quick-link-en">PAST ARCHIVE</span>
-              <h3>歴代大会リザルト記録</h3>
-              <p>過去大会の公式記録アーカイブ集</p>
+              <h3 class="quick-link-title">歴代大会リザルト記録</h3>
+              <p class="quick-link-desc">過去大会の公式記録アーカイブ集</p>
             </div>
-            <span class="quick-link-arrow">
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-            </span>
           </a>
 
+          <!-- リソース4: 白馬さのさか公式 -->
           <a href="https://sanosaka.jp/" target="_blank" rel="noopener noreferrer" class="quick-link-card">
-            <div class="quick-link-icon">
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            <div class="quick-link-top">
+              <div class="quick-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="quick-link-arrow">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </span>
             </div>
             <div class="quick-link-text">
               <span class="quick-link-en">OFFICIAL RESORT</span>
-              <h3>White Resort 白馬さのさか 公式</h3>
-              <p>ゲレンデ状況・リフト運行案内</p>
+              <h3 class="quick-link-title">White Resort 白馬さのさか 公式</h3>
+              <p class="quick-link-desc">ゲレンデ状況・リフト運行案内</p>
             </div>
-            <span class="quick-link-arrow">
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-            </span>
           </a>
         </div>
       </div>
