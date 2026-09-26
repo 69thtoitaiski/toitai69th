@@ -1,35 +1,40 @@
 /* ==========================================================================
    東医体スキー競技 大会ホームページ スタイルシート
-   Style: Sharp, Angular, Stylish Geometric Design
-   Base Color: Bright Cool Blue, Ice Cyan & Snow White (明るい寒色系の青)
+   Style: Minimalist, Sharp, Stylish Editorial Design (BAKE CHEESE TART Style)
+   Base Color: Pastel Blue (#c5dbff) & Crisp White (パステルブルー×白基調)
    ========================================================================== */
 
 :root {
-  /* Colors - Bright Cool Blue & Ice Cyan (明るい寒色系) */
-  --color-primary: #0077cc;        /* スタイリッシュで鮮やかなブライトブルー */
-  --color-primary-dark: #005a9c;   /* クールディープブルー */
-  --color-primary-light: #0099ff;  /* エレクトリックアイスブルー */
-  --color-accent: #0ea5e9;         /* スカイシアン */
-  --color-accent-light: #38bdf8;   /* ブライトシアン */
-  --color-accent-pale: #e0f2fe;    /* ペールアイス */
-  --color-cyan-glow: #06b6d4;      /* ネオンシアンアクセント */
-  --color-footer-bg: #074169;      /* 澄んだクールブルーフッター */
+  /* Colors - BAKE Cheese Tart Inspired Pastel Blue & Pure White (パステルブルー×白) */
+  --color-primary: #4a84d4;        /* 洗練されたクリアブルー（適度なコントラスト） */
+  --color-primary-dark: #2c5ba3;   /* ディープスレートブルー */
+  --color-primary-light: #7facf0;  /* ライトパステルブルー */
+  --color-pastel-main: #c5dbff;   /* BAKE公式パステルブルー #c5dbff */
+  --color-pastel-soft: #dbe8fd;   /* 柔らかなパステルブルー */
+  --color-pastel-pale: #edf4ff;   /* ペールパステル */
+  --color-pastel-ghost: #f5f9ff;  /* ほぼ白に近い淡いアイシーブルー */
 
-  --color-gold: #d97706;           /* リザルト用ゴールド */
-  --color-gold-pale: #fef3c7;
-  --color-danger: #e63946;         /* 重要お知らせ用レッド */
+  --color-accent: #6ca0e8;         /* アクセントブルー */
+  --color-accent-light: #9bc5ff;   /* 淡いアクセント */
+  --color-accent-pale: #edf5ff;    /* 超淡色 */
+  --color-cyan-glow: #c5dbff;      /* パステルブルーグロー */
+  --color-footer-bg: #142136;      /* シックなダークスレートネイビーフッター */
+
+  --color-gold: #b8860b;           /* リザルト用ゴールド */
+  --color-gold-pale: #fffbeb;
+  --color-danger: #e04848;         /* 重要お知らせ用レッド */
   --color-danger-pale: #fee2e2;
 
-  --color-bg: #f4f9fd;             /* 澄んだ雪面のようなアイスホワイト背景 */
-  --color-surface: #ffffff;        /* カード・パネル白背景 */
-  --color-surface-alt: #ecf5fc;    /* アイシーな薄青背景 */
+  --color-bg: #f8faff;             /* 清潔感あるパステルオフホワイト背景 */
+  --color-surface: #ffffff;        /* カード・パネル純白 */
+  --color-surface-alt: #f1f6fd;    /* アイシーな薄青背景 */
 
-  --color-text: #0f172a;           /* メインテキスト（シャープな濃色） */
-  --color-text-muted: #475569;     /* 補足テキスト */
-  --color-text-light: #94a3b8;     /* 薄いテキスト */
-  --color-border: #dbeafe;         /* 寒色系境界線 */
-  --color-border-subtle: #edf4fb;  /* 淡い境界線 */
-  --color-border-sharp: #93c5fd;   /* 強調境界線 */
+  --color-text: #162438;           /* メインテキスト（スタイリッシュなダークスレート） */
+  --color-text-muted: #4e6079;     /* 補足テキスト */
+  --color-text-light: #8a9cb5;     /* 薄いテキスト */
+  --color-border: #d8e5f7;         /* 繊細なパステル境界線 */
+  --color-border-subtle: #edf3fa;  /* 淡い境界線 */
+  --color-border-sharp: #c5dbff;   /* BAKEパステルブルー強調境界線 */
 
   /* Sharp Geometry - カクカクしたスタイリッシュな造形 (No rounded corners) */
   --radius-sm: 0px;
@@ -37,11 +42,11 @@
   --radius-lg: 0px;
   --radius-full: 0px;
 
-  /* Crisp Modern Shadows */
-  --shadow-xs: 0 1px 2px rgba(0, 119, 204, 0.04);
-  --shadow-sm: 0 2px 8px rgba(0, 119, 204, 0.08);
-  --shadow-md: 0 6px 18px rgba(0, 119, 204, 0.12);
-  --shadow-lg: 0 12px 32px rgba(0, 119, 204, 0.16);
+  /* Modern Light Crisp Shadows */
+  --shadow-xs: 0 1px 3px rgba(197, 219, 255, 0.2);
+  --shadow-sm: 0 2px 10px rgba(74, 132, 212, 0.08);
+  --shadow-md: 0 6px 20px rgba(74, 132, 212, 0.11);
+  --shadow-lg: 0 12px 36px rgba(74, 132, 212, 0.15);
 
   /* Typography */
   --font-base: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
@@ -310,15 +315,15 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Page Headers (Subpages - Sharp Angular Banner)
+   Page Headers (Subpages - Clean Minimalist Pastel Banner)
    ========================================================================== */
 .page-banner {
-  background: linear-gradient(135deg, #0284c7 0%, #0077cc 50%, #0ea5e9 100%);
-  color: #ffffff;
-  padding: 3.25rem 0;
+  background: linear-gradient(135deg, #c5dbff 0%, #dbe8fd 50%, #edf4ff 100%);
+  color: #12243d;
+  padding: 3.5rem 0;
   position: relative;
   overflow: hidden;
-  border-bottom: 3px solid var(--color-accent-light);
+  border-bottom: 2px solid var(--color-pastel-main);
 }
 
 .page-banner::after {
@@ -326,12 +331,12 @@ ul, ol {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 300px;
+  width: 320px;
   height: 100%;
   background: repeating-linear-gradient(
     45deg,
-    rgba(255, 255, 255, 0.05),
-    rgba(255, 255, 255, 0.05) 12px,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3) 12px,
     transparent 12px,
     transparent 24px
   );
@@ -349,13 +354,13 @@ ul, ol {
   gap: 0.5rem;
   font-size: 0.85rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.85);
+  color: #3b5a82;
   margin-bottom: 0.75rem;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
 }
 
 .breadcrumb a {
-  color: #ffffff;
+  color: #1a3c6c;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -364,138 +369,219 @@ ul, ol {
   font-size: 2.2rem;
   font-weight: 900;
   line-height: 1.2;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   margin-bottom: 0.5rem;
-  text-transform: uppercase;
+  color: #10243e;
 }
 
 .page-subtitle {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.95);
+  color: #3b506e;
   font-weight: 500;
+  letter-spacing: 0.03em;
 }
 
 /* ==========================================================================
-   Hero Section (Top Page - Bright Cool Blue & Geometric Mountain Motifs)
+   Hero Section (Top Page - BAKE Style Pastel Blue & Alpine Photo Background)
    ========================================================================== */
 .hero {
   position: relative;
-  background: linear-gradient(135deg, #0284c7 0%, #0077cc 40%, #0ea5e9 75%, #38bdf8 100%);
-  color: #ffffff;
-  padding: 4.5rem 0 5.5rem;
+  background-color: #f0f6ff;
+  color: var(--color-text);
   overflow: hidden;
-  border-bottom: 4px solid var(--color-cyan-glow);
+  border-bottom: 2px solid var(--color-pastel-main);
 }
 
-/* Sharp Geometric Mountain Silhouettes */
-.hero-bg-mountains {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 130px;
-  pointer-events: none;
-  opacity: 0.15;
+.hero-alpine {
+  background-image: url('../images/hero-bg.png');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  padding: 5.5rem 1rem 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-particles {
+.hero-overlay {
   position: absolute;
   inset: 0;
-  background-image: repeating-linear-gradient(
-    -45deg,
-    rgba(255, 255, 255, 0.04) 0px,
-    rgba(255, 255, 255, 0.04) 2px,
-    transparent 2px,
-    transparent 16px
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(235, 244, 255, 0.65) 45%,
+    rgba(244, 249, 255, 0.88) 100%
   );
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   pointer-events: none;
 }
 
-.hero-content {
+.hero-content-center {
   position: relative;
   z-index: 2;
-  max-width: 820px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.hero-edition-tag {
-  display: inline-flex;
+.hero-center-box {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-pastel-main);
+  box-shadow: 0 16px 45px rgba(140, 180, 235, 0.22);
+  padding: 3.8rem 3rem;
+  max-width: 880px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 4px solid #ffffff;
-  padding: 0.4rem 1rem;
-  font-size: 0.875rem;
+}
+
+.hero-sub-title {
+  font-size: 1.15rem;
   font-weight: 700;
-  margin-bottom: 1.25rem;
-  letter-spacing: 0.06em;
+  color: #3567a8;
+  letter-spacing: 0.16em;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
   text-transform: uppercase;
 }
 
-.hero-edition-tag .dot {
-  width: 7px;
-  height: 7px;
-  background-color: #38ef7d;
-  box-shadow: 0 0 8px #38ef7d;
-}
-
-.hero-title {
-  font-size: clamp(2.3rem, 5vw, 3.6rem);
+.hero-main-title {
+  font-size: clamp(2.4rem, 6.5vw, 4rem);
   font-weight: 900;
-  line-height: 1.2;
-  margin-bottom: 1.25rem;
-  letter-spacing: 0.04em;
-  text-shadow: 0 3px 12px rgba(0, 40, 80, 0.25);
+  color: #12243e;
+  letter-spacing: 0.24em;
+  line-height: 1.25;
+  margin: 0.25rem 0 1.25rem 0;
 }
 
-.hero-title span {
-  display: block;
-  font-size: 0.6em;
-  font-weight: 700;
-  color: #e0f2fe;
-  letter-spacing: 0.12em;
-  margin-bottom: 0.35rem;
-  font-family: var(--font-en);
+.hero-divider-bar {
+  width: 56px;
+  height: 3px;
+  background-color: var(--color-pastel-main);
+  margin: 0 auto 1.75rem;
 }
 
-.hero-desc {
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: rgba(255, 255, 255, 0.95);
-  margin-bottom: 2rem;
-  max-width: 680px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-}
-
-.hero-meta-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem 2.5rem;
-  background-color: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-left: 4px solid var(--color-cyan-glow);
-  padding: 1.1rem 1.5rem;
+.hero-info-group {
   margin-bottom: 2.25rem;
-}
-
-.hero-meta-item {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 0.65rem;
-  font-size: 0.95rem;
+  align-items: center;
 }
 
-.hero-meta-item svg {
-  width: 20px;
-  height: 20px;
+.hero-dates {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #162f52;
+  letter-spacing: 0.08em;
+}
+
+.hero-location {
+  font-size: 1.025rem;
+  font-weight: 600;
+  color: #3b506e;
+  line-height: 1.65;
+  letter-spacing: 0.04em;
+  max-width: 720px;
+}
+
+.hero-host {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #24426b;
+  letter-spacing: 0.06em;
+}
+
+/* SEIKO Sportslink Button (Center Hero) */
+.hero-seiko-wrap {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  width: 100%;
+}
+
+.btn-seiko {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  background-color: #ffffff;
+  color: #0f2444;
+  border: 2px solid var(--color-pastel-main);
+  padding: 1.05rem 2.5rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(197, 219, 255, 0.45);
+  text-decoration: none;
+  max-width: 100%;
+}
+
+.btn-seiko:hover {
+  background-color: var(--color-pastel-main);
+  color: #0c1b30;
+  border-color: #9bbef5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(175, 205, 250, 0.6);
+}
+
+.btn-seiko-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  background-color: #142848;
   color: #ffffff;
+  padding: 0.25rem 0.6rem;
   flex-shrink: 0;
 }
 
-.hero-cta-group {
+.btn-seiko-title {
+  flex-grow: 1;
+}
+
+.hero-seiko-caption {
+  font-size: 0.825rem;
+  color: #64748b;
+  letter-spacing: 0.03em;
+}
+
+/* Hero Quick Navigation CTA */
+.hero-quick-cta {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.btn-hero-sub {
+  background: #ffffff;
+  color: #334e72;
+  border: 1px solid var(--color-pastel-main);
+  padding: 0.75rem 1.6rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-hero-sub:hover {
+  background: var(--color-pastel-pale);
+  color: #0f2444;
+  border-color: #a3c7fc;
+  transform: translateY(-1px);
 }
 
 /* ==========================================================================
@@ -519,55 +605,56 @@ ul, ol {
 }
 
 .btn-primary {
-  background: var(--color-primary);
-  color: #ffffff;
-  border: 2px solid var(--color-primary);
-  box-shadow: 0 4px 14px rgba(0, 119, 204, 0.3);
+  background: var(--color-pastel-main);
+  color: #0e223d;
+  border: 1.5px solid #9ec4ff;
+  box-shadow: 0 4px 14px rgba(197, 219, 255, 0.45);
 }
 
 .btn-primary:hover {
-  background: var(--color-primary-light);
-  border-color: var(--color-primary-light);
-  color: #ffffff;
+  background: #b2d2fd;
+  border-color: #8bbafc;
+  color: #08162b;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 119, 204, 0.4);
+  box-shadow: 0 6px 20px rgba(197, 219, 255, 0.6);
 }
 
 .btn-white {
   background-color: #ffffff;
-  color: var(--color-primary);
-  border: 2px solid #ffffff;
-  box-shadow: var(--shadow-md);
+  color: #1a3c6c;
+  border: 1.5px solid var(--color-pastel-main);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-white:hover {
-  background-color: #f0f7ff;
-  color: var(--color-primary-dark);
-  border-color: #f0f7ff;
+  background-color: var(--color-pastel-ghost);
+  color: #0f2648;
+  border-color: #a8cdfd;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-outline-white {
   background-color: transparent;
   color: #ffffff;
-  border: 2px solid #ffffff;
+  border: 1.5px solid #ffffff;
 }
 
 .btn-outline-white:hover {
   background-color: #ffffff;
-  color: var(--color-primary);
+  color: #12243d;
 }
 
 .btn-outline-primary {
-  background-color: transparent;
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  background-color: #ffffff;
+  color: #1a3c6c;
+  border: 1.5px solid var(--color-pastel-main);
 }
 
 .btn-outline-primary:hover {
-  background-color: var(--color-primary);
-  color: #ffffff;
+  background-color: var(--color-pastel-pale);
+  border-color: #9ac2fb;
+  color: #0c1c33;
 }
 
 .btn-sm {
@@ -663,22 +750,22 @@ ul, ol {
 .section-title {
   font-size: 2rem;
   font-weight: 900;
-  color: var(--color-primary-dark);
+  color: #12243d;
   position: relative;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
 }
 
 .section-title::after {
   content: "";
   display: block;
-  width: 48px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-accent-light));
-  margin: 0.6rem auto 0;
+  width: 44px;
+  height: 3px;
+  background-color: var(--color-pastel-main);
+  margin: 0.75rem auto 0;
 }
 
 .section-header-left .section-title::after {
-  margin: 0.6rem 0 0;
+  margin: 0.75rem 0 0;
 }
 
 .section-desc {
@@ -695,7 +782,7 @@ ul, ol {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.25rem;
-  margin-top: -2.5rem;
+  margin-top: 3.5rem;
   position: relative;
   z-index: 10;
   margin-bottom: 3rem;
@@ -704,29 +791,29 @@ ul, ol {
 .quick-link-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-top: 4px solid var(--color-primary);
-  padding: 1.5rem;
+  border-top: 3px solid var(--color-pastel-main);
+  padding: 1.6rem 1.5rem;
   box-shadow: var(--shadow-sm);
   display: flex;
   align-items: center;
   gap: 1.25rem;
   text-decoration: none;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .quick-link-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-top-color: var(--color-accent-light);
-  border-color: var(--color-primary-light);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(197, 219, 255, 0.4);
+  border-top-color: #8bbafc;
+  border-color: #c5dbff;
 }
 
 .quick-link-icon {
   width: 52px;
   height: 52px;
-  background-color: var(--color-surface-alt);
+  background-color: var(--color-pastel-pale);
   border: 1px solid var(--color-border);
-  color: var(--color-primary);
+  color: #2b5b9c;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -735,9 +822,9 @@ ul, ol {
 }
 
 .quick-link-card:hover .quick-link-icon {
-  background-color: var(--color-primary);
-  color: #ffffff;
-  border-color: var(--color-primary);
+  background-color: var(--color-pastel-main);
+  color: #0d213d;
+  border-color: var(--color-pastel-main);
 }
 
 .quick-link-icon svg {
@@ -766,7 +853,7 @@ ul, ol {
   background-color: var(--color-surface);
   box-shadow: var(--shadow-xs);
   border: 1px solid var(--color-border);
-  border-top: 3px solid var(--color-primary);
+  border-top: 3px solid var(--color-pastel-main);
 }
 
 .news-item {
@@ -953,10 +1040,11 @@ ul, ol {
 }
 
 .filter-btn.active {
-  background-color: var(--color-primary);
-  color: #ffffff;
-  border-color: var(--color-primary);
-  box-shadow: 0 2px 8px rgba(0, 119, 204, 0.25);
+  background-color: var(--color-pastel-main);
+  color: #0e223d;
+  border-color: #9ec4ff;
+  font-weight: 800;
+  box-shadow: 0 2px 10px rgba(197, 219, 255, 0.45);
 }
 
 /* ==========================================================================
@@ -971,7 +1059,7 @@ ul, ol {
 .overview-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-top: 4px solid var(--color-primary);
+  border-top: 3px solid var(--color-pastel-main);
   padding: 1.75rem;
   box-shadow: var(--shadow-sm);
   display: flex;
@@ -990,8 +1078,8 @@ ul, ol {
 .overview-icon {
   width: 40px;
   height: 40px;
-  background-color: var(--color-accent-pale);
-  color: var(--color-primary);
+  background-color: var(--color-pastel-pale);
+  color: #2b5b9c;
   border: 1px solid var(--color-border-sharp);
   display: flex;
   align-items: center;
@@ -1175,7 +1263,7 @@ ul, ol {
   background-color: var(--color-surface);
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--color-border);
-  border-top: 3px solid var(--color-primary);
+  border-top: 3px solid var(--color-pastel-main);
   overflow-x: auto;
   margin-bottom: 2.5rem;
 }
@@ -1189,7 +1277,7 @@ ul, ol {
 
 .schedule-table th {
   background-color: var(--color-surface-alt);
-  color: var(--color-primary-dark);
+  color: #12243d;
   font-weight: 800;
   padding: 1rem 1.25rem;
   border-bottom: 2px solid var(--color-border-sharp);
@@ -1215,11 +1303,12 @@ ul, ol {
 .schedule-day-badge {
   display: inline-block;
   padding: 0.25rem 0.65rem;
-  background-color: var(--color-primary);
-  color: #ffffff;
+  background-color: var(--color-pastel-main);
+  color: #0f2444;
   font-weight: 800;
   font-size: 0.8rem;
   letter-spacing: 0.05em;
+  border: 1px solid #9ec4ff;
 }
 
 .schedule-event-title {
@@ -1258,16 +1347,16 @@ ul, ol {
    Results Page (results.html - Sharp Modern Cards)
    ========================================================================== */
 .results-hero-banner {
-  background: linear-gradient(135deg, #0284c7 0%, #0077cc 100%);
-  padding: 2rem;
-  color: #ffffff;
+  background: linear-gradient(135deg, #c5dbff 0%, #dbe8fd 60%, #edf4ff 100%);
+  padding: 2.25rem 2.5rem;
+  color: #12243d;
   margin-bottom: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1.5rem;
-  border-left: 5px solid var(--color-cyan-glow);
+  border-left: 5px solid var(--color-pastel-main);
   box-shadow: var(--shadow-sm);
 }
 
@@ -1275,11 +1364,12 @@ ul, ol {
   font-size: 1.4rem;
   font-weight: 900;
   margin-bottom: 0.35rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
+  color: #10243e;
 }
 
 .results-hero-banner p {
-  color: rgba(255, 255, 255, 0.95);
+  color: #3b506e;
   font-size: 0.95rem;
 }
 
@@ -1290,13 +1380,13 @@ ul, ol {
 .result-group-title {
   font-size: 1.35rem;
   font-weight: 800;
-  color: var(--color-primary-dark);
+  color: #12243d;
   display: flex;
   align-items: center;
   gap: 0.65rem;
   margin-bottom: 1.25rem;
   padding-bottom: 0.5rem;
-  border-bottom: 3px solid var(--color-primary);
+  border-bottom: 2px solid var(--color-pastel-main);
 }
 
 .result-cards-grid {
@@ -1308,7 +1398,7 @@ ul, ol {
 .result-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-top: 4px solid var(--color-primary);
+  border-top: 3px solid var(--color-pastel-main);
   padding: 1.5rem;
   box-shadow: var(--shadow-xs);
   display: flex;
@@ -1319,8 +1409,8 @@ ul, ol {
 
 .result-card:hover {
   transform: translateY(-3px);
-  border-color: var(--color-primary-light);
-  box-shadow: var(--shadow-md);
+  border-color: #a8cdfd;
+  box-shadow: 0 10px 25px rgba(197, 219, 255, 0.4);
 }
 
 .result-card-top {
@@ -1387,19 +1477,21 @@ ul, ol {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: var(--color-primary);
-  color: #ffffff;
+  background: var(--color-pastel-main);
+  color: #0e223d;
   padding: 0.75rem 1.25rem;
   font-size: 0.9rem;
   font-weight: 800;
   transition: all 0.2s ease;
   letter-spacing: 0.03em;
+  border: 1px solid #9ec4ff;
 }
 
 .result-download-btn:hover {
-  background: var(--color-primary-light);
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 119, 204, 0.3);
+  background: #b2d2fd;
+  color: #08162b;
+  border-color: #8bbafc;
+  box-shadow: 0 4px 14px rgba(197, 219, 255, 0.5);
 }
 
 .result-download-btn svg {
@@ -1408,7 +1500,7 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Footer (Crisp Deep Cool Blue - 澄んだクールブルー)
+   Footer (Crisp Deep Slate Navy with Pastel Accent)
    ========================================================================== */
 .site-footer {
   margin-top: auto;
@@ -1417,7 +1509,7 @@ ul, ol {
   padding: 4rem 0 2rem;
   position: relative;
   overflow: hidden;
-  border-top: 4px solid var(--color-cyan-glow);
+  border-top: 3px solid var(--color-pastel-main);
 }
 
 .footer-grid {
@@ -1521,12 +1613,36 @@ ul, ol {
     display: flex;
   }
 
-  .hero {
-    padding: 3rem 0 3.5rem;
+  .hero-alpine {
+    padding: 3.5rem 0.75rem 4rem;
+  }
+
+  .hero-center-box {
+    padding: 2.25rem 1.25rem;
+  }
+
+  .hero-main-title {
+    letter-spacing: 0.14em;
+  }
+
+  .hero-dates {
+    font-size: 1.15rem;
+  }
+
+  .hero-location {
+    font-size: 0.925rem;
+  }
+
+  .btn-seiko {
+    padding: 0.9rem 1.25rem;
+    font-size: 0.95rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
   }
 
   .quick-links-grid {
-    margin-top: -1.5rem;
+    margin-top: 2rem;
   }
 
   .news-item {
