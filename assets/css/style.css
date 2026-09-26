@@ -154,7 +154,7 @@ ul, ol {
   width: 44px;
   height: 44px;
   background: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
-  border-radius: var(--radius-md);
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -837,9 +837,9 @@ ul, ol {
 }
 
 .quick-link-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  border-radius: 0;
   background-color: #eef6fd;
   color: #2563eb;
   border: 1px solid #dbeafe;
@@ -854,7 +854,7 @@ ul, ol {
   background-color: #2563eb;
   color: #ffffff;
   border-color: #2563eb;
-  transform: scale(1.08);
+  transform: translateY(-2px) scale(1.05);
 }
 
 .quick-link-icon svg {
@@ -865,9 +865,10 @@ ul, ol {
 .quick-link-arrow {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: 0;
   background-color: #f4f8fe;
   color: #6296d4;
+  border: 1px solid #e1edf8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -878,6 +879,7 @@ ul, ol {
 .quick-link-card:hover .quick-link-arrow {
   background-color: #2563eb;
   color: #ffffff;
+  border-color: #2563eb;
   transform: translateX(3px);
 }
 
@@ -987,9 +989,10 @@ ul, ol {
 .news-arrow {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: 0;
   background-color: #f4f8fe;
   color: #6296d4;
+  border: 1px solid #e1edf8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1000,6 +1003,7 @@ ul, ol {
 .news-item:hover .news-arrow {
   background-color: #2563eb;
   color: #ffffff;
+  border-color: #2563eb;
   transform: translateX(3px);
 }
 
@@ -1037,7 +1041,7 @@ ul, ol {
 .btn-circle-arrow {
   width: 22px;
   height: 22px;
-  border-radius: 50%;
+  border-radius: 0;
   background-color: #eef5fc;
   color: #2563eb;
   display: inline-flex;
@@ -1205,7 +1209,7 @@ ul, ol {
 .overview-icon {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
+  border-radius: 0;
   background-color: #eef5fc;
   color: #2563eb;
   border: 1px solid #dbeafe;
