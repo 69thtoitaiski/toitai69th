@@ -49,8 +49,9 @@
   --shadow-md: 0 6px 20px rgba(74, 132, 212, 0.11);
   --shadow-lg: 0 12px 36px rgba(74, 132, 212, 0.15);
 
-  /* Typography */
-  --font-base: "Zen Kaku Gothic New", "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", sans-serif;
+  /* Typography - M PLUS Rounded 1c (ちょい細め・洗練された丸ゴシック) */
+  --font-base: "M PLUS Rounded 1c", "Zen Kaku Gothic New", "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", sans-serif;
+  --font-ja: var(--font-base);
   --font-en: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   /* Layout */
@@ -153,7 +154,7 @@ ul, ol {
 .brand-title {
   font-family: var(--font-ja);
   font-size: 1.12rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.03em;
   color: #12243d;
   line-height: 1.25;
@@ -372,7 +373,7 @@ ul, ol {
 
 .page-title {
   font-size: 2.2rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.08em;
   margin-bottom: 0.5rem;
@@ -444,7 +445,7 @@ ul, ol {
 
 .hero-edition-number {
   font-size: clamp(2.2rem, 5vw, 3rem);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.16em;
   color: #ffffff;
   line-height: 1.2;
@@ -461,7 +462,7 @@ ul, ol {
 
 .hero-tournament-name {
   font-size: clamp(1.9rem, 4.6vw, 3.2rem);
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0.1em;
   line-height: 1.3;
   color: #ffffff;
@@ -469,7 +470,7 @@ ul, ol {
 
 .hero-discipline-name {
   font-size: clamp(2.4rem, 5.8vw, 4rem);
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0.22em;
   line-height: 1.2;
   color: #ffffff;
@@ -485,7 +486,7 @@ ul, ol {
 
 .hero-event-dates {
   font-size: clamp(1.2rem, 2.7vw, 1.55rem);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.08em;
   color: #ffffff;
 }
@@ -533,7 +534,7 @@ ul, ol {
   border-radius: 12px !important;
   color: #12243d;
   font-size: clamp(1.05rem, 2vw, 1.18rem);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.08em;
   margin-bottom: 2rem;
   box-shadow: 0 6px 20px rgba(96, 165, 250, 0.25);
@@ -565,7 +566,7 @@ ul, ol {
   color: #ffffff !important;
   padding: 0.95rem 3rem;
   font-size: 1.1rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.08em;
   border-radius: 12px !important;
   text-decoration: none;
@@ -759,7 +760,7 @@ ul, ol {
 
 .section-title {
   font-size: clamp(1.8rem, 3.8vw, 2.3rem);
-  font-weight: 800;
+  font-weight: 700;
   color: #12243d;
   position: relative;
   letter-spacing: 0.06em;
@@ -922,7 +923,7 @@ ul, ol {
 .quick-link-title,
 .quick-link-text h3 {
   font-size: 1.18rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #10243e;
   margin-bottom: 0.55rem;
   letter-spacing: 0.02em;
