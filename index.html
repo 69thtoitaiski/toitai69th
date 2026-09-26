@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;800;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#c5dbff">
 </head>
 <body>
 
@@ -83,40 +84,44 @@
 
   <!-- メインコンテンツ -->
   <main>
-    <!-- ヒーローセクション (BAKE調パステルブルー×白、白馬連峰背景、中央揃え) -->
+    <!-- ヒーローセクション (白馬連峰背景・文字すかしレイアウト・完全中央揃え) -->
     <section class="hero hero-alpine">
       <div class="hero-overlay"></div>
 
-      <div class="container hero-content-center">
-        <div class="hero-center-box">
-          <p class="hero-sub-title">第69回東日本医科学生総合体育大会</p>
-          <h1 class="hero-main-title">スキー競技</h1>
-          <div class="hero-divider-bar"></div>
-
-          <div class="hero-info-group">
-            <p class="hero-dates">2027年3月2日(火) 〜 3月10日(水)</p>
-            <p class="hero-location">開催地：長野県 White Resort 白馬さのさかスキー場 / 白馬クロスカントリー競技場スノーハープ</p>
-            <p class="hero-host">主管：東京慈恵会医科大学医学部</p>
+      <div class="container hero-container-trans">
+        <div class="hero-translucent-body">
+          <p class="hero-edition-number">第69回</p>
+          <div class="hero-titles-wrap">
+            <h1 class="hero-tournament-name">東日本医科学生総合体育大会</h1>
+            <h2 class="hero-discipline-name">スキー競技</h2>
           </div>
 
-          <!-- セイコースポーツリンク (速報・公式リザルト) -->
-          <div class="hero-seiko-wrap">
-            <a href="https://seikosportslink.com/" target="_blank" rel="noopener noreferrer" class="btn-seiko">
-              <span class="btn-seiko-tag">SEIKO SPORTSLINK</span>
-              <span class="btn-seiko-title">セイコースポーツリンク（速報・リザルト）</span>
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          <div class="hero-meta-block">
+            <p class="hero-event-dates">2027年3月2日(火) 〜 3月10日(水)</p>
+            <p class="hero-event-venue">開催地：長野県 White Resort 白馬さのさかスキー場 / 白馬クロスカントリー競技場スノーハープ</p>
+          </div>
+
+          <!-- 主管（半透明フロストガラス枠） -->
+          <div class="hero-host-capsule">
+            主管：東京慈恵会医科大学医学部
+          </div>
+
+          <!-- セイコースポーツリンク (速報ボタン・画像完全再現) -->
+          <div class="hero-seiko-btn-wrap">
+            <a href="https://seikosportslink.com/" target="_blank" rel="noopener noreferrer" class="btn-seiko-pill">
+              <span class="live-indicator-dot"></span>
+              <span>SEIKO Sports Link (速報)</span>
             </a>
-            <p class="hero-seiko-caption">※ 競技当日の公式タイム速報およびリザルトはセイコースポーツリンクにてご覧いただけます</p>
           </div>
 
-          <!-- サブナビゲーション -->
-          <div class="hero-quick-cta">
-            <a href="documents.html" class="btn btn-hero-sub">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          <!-- サブ導線ボタン (透明フロストガラス) -->
+          <div class="hero-glass-actions">
+            <a href="documents.html" class="btn-glass-sub">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
               大会要項・書類ダウンロード
             </a>
-            <a href="schedule.html" class="btn btn-hero-sub">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <a href="schedule.html" class="btn-glass-sub">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
               競技日程を見る
             </a>
           </div>
