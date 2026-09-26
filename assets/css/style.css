@@ -391,7 +391,7 @@ ul, ol {
    ========================================================================== */
 .hero {
   position: relative;
-  background-color: #0b1728;
+  background-color: #f0f7ff;
   color: #ffffff;
   overflow: hidden;
   border-bottom: 2px solid var(--color-pastel-main);
@@ -410,15 +410,16 @@ ul, ol {
   position: relative;
 }
 
-/* ぼかし一切なしの写真そのままの透明度オーバーレイ（雪景色をくっきり残しつつ文字コントラストを最大化） */
+/* 明るく爽やかなスカイブルー＆ホワイトの空気感オーバーレイ（暗い黒を一切使わず、晴れ渡る白馬の青空と雪景色を輝かせる） */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(8, 16, 28, 0.52) 0%,
-    rgba(8, 16, 28, 0.38) 45%,
-    rgba(8, 16, 28, 0.70) 100%
+    rgba(197, 219, 255, 0.20) 0%,
+    rgba(255, 255, 255, 0.05) 30%,
+    rgba(255, 255, 255, 0.20) 65%,
+    rgba(240, 247, 255, 0.94) 100%
   );
   pointer-events: none;
 }
@@ -431,14 +432,14 @@ ul, ol {
   margin: 0 auto;
 }
 
-/* 完全中央揃え・くっきり高コントラストレイアウト（ぼかしゼロ） */
+/* 完全中央揃え・澄んだ光彩のタイポグラフィ（黒の重い影を排除し、澄んだスカイブルーシャドウを採用） */
 .hero-translucent-body {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 3px 12px rgba(0, 0, 0, 0.9), 0 0 24px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 2px 10px rgba(18, 48, 92, 0.45), 0 1px 3px rgba(18, 48, 92, 0.55);
 }
 
 .hero-edition-number {
@@ -521,30 +522,33 @@ ul, ol {
   padding: 0 0.2rem;
 }
 
-/* 主管：東京慈恵会医科大学医学部（ぼかしゼロ・鮮明なダーク半透明プレート・白枠） */
+/* 主管：東京慈恵会医科大学医学部（BAKE Cheesetartスタイル - 純白×パステルブルーのクリーンなプレート） */
 .hero-host-capsule {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.65rem 2.5rem;
-  background: rgba(20, 34, 52, 0.72);
-  border: 1.5px solid rgba(255, 255, 255, 0.88);
-  border-radius: var(--radius-sm);
-  color: #ffffff;
-  font-size: clamp(1.05rem, 2vw, 1.15rem);
-  font-weight: 700;
+  padding: 0.75rem 2.8rem;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1.5px solid #a3c9f8;
+  border-radius: 12px !important;
+  color: #12243d;
+  font-size: clamp(1.05rem, 2vw, 1.18rem);
+  font-weight: 800;
   letter-spacing: 0.08em;
-  margin-bottom: 1.85rem;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 20px rgba(96, 165, 250, 0.25);
   transition: all 0.25s ease;
+  text-shadow: none;
 }
 
 .hero-host-capsule:hover {
-  background: rgba(26, 44, 68, 0.85);
-  border-color: #ffffff;
+  background: #ffffff;
+  border-color: #3b82f6;
+  box-shadow: 0 8px 24px rgba(96, 165, 250, 0.38);
+  transform: translateY(-2px);
 }
 
-/* セイコースポーツリンク（ぼかしゼロ・鮮明なレッドピルボタン） */
+/* セイコースポーツリンク（鮮やかなレッド・黒影完全排除） */
 .hero-seiko-btn-wrap {
   margin-bottom: 1rem;
   display: flex;
@@ -557,24 +561,24 @@ ul, ol {
   align-items: center;
   gap: 0.75rem;
   background: #dc2626;
-  border: 1.5px solid #ffffff;
+  border: 2px solid #ffffff;
   color: #ffffff !important;
-  padding: 0.9rem 2.8rem;
-  font-size: 1.08rem;
+  padding: 0.95rem 3rem;
+  font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-  border-radius: var(--radius-pill);
+  border-radius: 12px !important;
   text-decoration: none;
-  box-shadow: 0 6px 22px rgba(220, 38, 38, 0.55), 0 2px 8px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.42);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  text-shadow: none;
 }
 
 .btn-seiko-pill:hover {
   background: #b91c1c;
   border-color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(220, 38, 38, 0.7);
+  box-shadow: 0 12px 30px rgba(220, 38, 38, 0.58);
   color: #ffffff !important;
 }
 
@@ -803,50 +807,59 @@ ul, ol {
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 992px) {
   .quick-links-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.85rem;
+    gap: 1.4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .quick-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2.2rem;
+    margin-bottom: 2.5rem;
   }
 }
 
 .quick-link-card {
   background-color: #ffffff;
-  border: 1px solid #e1edf8;
+  border: 1.5px solid #dcebfa;
   border-radius: 18px !important;
   aspect-ratio: 1 / 1 !important;
-  padding: 1.75rem 1.5rem 1.6rem;
-  box-shadow: 0 4px 18px rgba(18, 36, 61, 0.04);
+  padding: 1.85rem 1.6rem 1.7rem;
+  box-shadow: 0 4px 20px rgba(18, 48, 92, 0.04);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-decoration: none;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
 }
 
 .quick-link-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 36px rgba(140, 185, 235, 0.28);
-  border-color: #89b4e9;
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(130, 185, 245, 0.25);
+  border-color: #7bb2ef;
 }
 
 .quick-link-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: auto;
+  margin-bottom: 1.1rem;
   width: 100%;
 }
 
 .quick-link-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 12px !important;
-  background-color: #eef6fd;
+  width: 48px;
+  height: 48px;
+  border-radius: 13px !important;
+  background: linear-gradient(135deg, #f0f7ff 0%, #e2effe 100%);
   color: #2563eb;
-  border: 1px solid #dbeafe;
+  border: 1px solid #cce2fd;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -855,23 +868,23 @@ ul, ol {
 }
 
 .quick-link-card:hover .quick-link-icon {
-  background-color: #2563eb;
+  background: #2563eb;
   color: #ffffff;
   border-color: #2563eb;
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .quick-link-icon svg {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
 }
 
 .quick-link-arrow {
   width: 32px;
   height: 32px;
-  border-radius: 8px !important;
+  border-radius: 9px !important;
   background-color: #f4f8fe;
-  color: #6296d4;
+  color: #5a92d6;
   border: 1px solid #e1edf8;
   display: flex;
   align-items: center;
@@ -887,18 +900,57 @@ ul, ol {
   transform: translateX(3px);
 }
 
-@media (max-width: 580px) {
+.quick-link-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.quick-link-en {
+  font-family: var(--font-en);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #4b8ee6;
+  text-transform: uppercase;
+  margin-bottom: 0.45rem;
+  display: block;
+  line-height: 1.35;
+}
+
+.quick-link-title,
+.quick-link-text h3 {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #10243e;
+  margin-bottom: 0.55rem;
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+  word-break: auto-phrase;
+}
+
+.quick-link-desc,
+.quick-link-text p {
+  font-size: 0.84rem;
+  color: #587597;
+  line-height: 1.6;
+  word-break: auto-phrase;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
   .quick-link-card {
-    padding: 1rem 0.9rem !important;
-    border-radius: 14px !important;
+    padding: 1.25rem 1.05rem 1.15rem !important;
+    border-radius: 15px !important;
   }
   .quick-link-top {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
   .quick-link-icon {
     width: 38px !important;
     height: 38px !important;
-    border-radius: 8px !important;
+    border-radius: 10px !important;
   }
   .quick-link-icon svg {
     width: 20px;
@@ -908,59 +960,25 @@ ul, ol {
     display: none;
   }
   .quick-link-en {
-    font-size: 0.62rem;
-    letter-spacing: 0.12em;
-    margin-bottom: 0.15rem;
+    font-size: 0.63rem;
+    letter-spacing: 0.11em;
+    margin-bottom: 0.3rem;
+    line-height: 1.3;
   }
   .quick-link-title {
-    font-size: 0.92rem;
-    margin-bottom: 0.2rem;
-    line-height: 1.25;
+    font-size: 0.96rem;
+    margin-bottom: 0.35rem;
+    line-height: 1.4;
   }
   .quick-link-desc {
-    font-size: 0.72rem;
-    line-height: 1.3;
+    font-size: 0.73rem;
+    line-height: 1.5;
+    color: #587394;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-}
-
-.quick-link-text {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.quick-link-en {
-  font-family: var(--font-en);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.22em;
-  color: #5a94e0;
-  text-transform: uppercase;
-  margin-bottom: 0.35rem;
-  display: block;
-}
-
-.quick-link-title,
-.quick-link-text h3 {
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: #12243d;
-  margin-bottom: 0.45rem;
-  letter-spacing: 0.02em;
-  line-height: 1.4;
-  word-break: auto-phrase;
-}
-
-.quick-link-desc,
-.quick-link-text p {
-  font-size: 0.85rem;
-  color: #647e9e;
-  line-height: 1.6;
-  word-break: auto-phrase;
 }
 
 /* ==========================================================================
