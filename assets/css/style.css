@@ -522,8 +522,9 @@ ul, ol {
   min-height: 85vh;
   min-height: 85svh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: #0c1f36;
   background-image: 
     linear-gradient(
@@ -537,7 +538,7 @@ ul, ol {
   background-position: center 28%;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 7rem 0 6.5rem;
+  padding: 0 1.5rem clamp(4.8rem, 8vh, 6.5rem);
   overflow: hidden;
   text-align: center;
 }
@@ -557,7 +558,7 @@ ul, ol {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
 }
 
@@ -569,14 +570,15 @@ ul, ol {
   align-items: center;
 }
 
-/* メインタイトル：第69回 / 東日本医科学生総合体育大会 / スキー競技（3行均整配置） */
+/* メインタイトル：第69回 / 東日本医科学生総合体育大会 / スキー競技（3行均整配置・上下同面積の余白設計） */
 .hero-title {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 3.5rem;
+  margin-top: clamp(4.8rem, 9.5vh, 6.5rem);
+  margin-bottom: clamp(4.8rem, 9.5vh, 6.5rem);
   text-align: center;
 }
 
@@ -718,11 +720,12 @@ ul, ol {
   .hero {
     min-height: 88vh;
     min-height: 88svh;
-    padding: 6rem 1.25rem 6.5rem;
+    padding: 0 1.25rem clamp(4.5rem, 10vw, 6rem);
     background-position: center 30%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
   .hero-content {
     width: 100%;
@@ -731,8 +734,9 @@ ul, ol {
     align-items: center;
   }
   .hero-title {
-    gap: 0.9rem;
-    margin-bottom: clamp(3.5rem, 10vw, 5rem); /* 広めで品格のある贅沢な余白 */
+    gap: 0.85rem;
+    margin-top: clamp(4.2rem, 12vw, 5.8rem);
+    margin-bottom: clamp(4.2rem, 12vw, 5.8rem);
   }
   .hero-title-line {
     font-size: clamp(1.22rem, 4.5vw, 1.75rem);
