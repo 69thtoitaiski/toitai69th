@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>大会要項・書類ダウンロード | 第69回 東日本医科学生総合体育大会 スキー競技 公式サイト</title>
   <meta name="description" content="第69回 東日本医科学生総合体育大会 冬季大会 スキー競技部門の公式実施要綱、エントリーシート、白馬さのさか・スノーハープ会場コース図等のPDF/Excelダウンロード一覧です。">
-  <link rel="stylesheet" href="assets/css/style.css?v=20270115_cute_centered">
+  <link rel="stylesheet" href="assets/css/style.css?v=20270115_qast_header">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;800;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -25,48 +25,35 @@
 </head>
 <body>
 
-  <!-- ヘッダー -->
+  <!-- ヘッダー (qast.jp Modern Floating Card Style) -->
   <header class="site-header">
-    <div class="container header-inner">
+    <div class="header-inner">
       <a href="index.html" class="site-brand">
-        <div class="brand-emblem" aria-hidden="true">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="brandEmblemGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#84bcfc"/>
-                <stop offset="100%" stop-color="#2c6ed5"/>
-              </linearGradient>
-            </defs>
-            <rect width="40" height="40" rx="12" fill="url(#brandEmblemGrad)"/>
-            <!-- Cute soft mountain peaks & ski slope -->
-            <path d="M10 28L17 17.5L23.5 28H10Z" fill="rgba(255, 255, 255, 0.45)"/>
-            <path d="M17 28L23.5 15L30 28H17Z" fill="#ffffff"/>
-            <!-- Cute snow cap & star dots -->
-            <circle cx="28.5" cy="11.5" r="1.8" fill="#ffffff"/>
-            <circle cx="11.5" cy="13" r="1.2" fill="rgba(255, 255, 255, 0.8)"/>
-            <path d="M6 25.5C11.5 25.5 15.5 28 22 28C27 28 29.5 26.5 34 23.5" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="brand-text">
-          <span class="brand-sub">第69回 東日本医科学生総合体育大会</span>
-          <span class="brand-main">スキー競技<span class="brand-sparkle">✦</span></span>
-        </div>
+        <span class="brand-title">東医体<span class="brand-year">2027</span></span>
       </a>
 
       <!-- デスクトップ ナビゲーション -->
-      <nav class="nav-menu">
-        <a href="index.html" class="nav-link">トップ</a>
-        <a href="news.html" class="nav-link">お知らせ</a>
-        <a href="documents.html" class="nav-link active">大会要項・書類</a>
-        <a href="schedule.html" class="nav-link">競技日程</a>
-        <a href="results.html" class="nav-link">大会結果</a>
-      </nav>
+      <div class="header-nav-wrap">
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-link">トップ</a>
+          <a href="news.html" class="nav-link">お知らせ</a>
+          <a href="documents.html" class="nav-link active">大会要項・書類</a>
+          <a href="schedule.html" class="nav-link">競技日程</a>
+          <a href="results.html" class="nav-link">大会結果</a>
+        </nav>
+        <div class="header-cta-wrap">
+          <a href="https://seikosportslink.com/" target="_blank" rel="noopener noreferrer" class="header-cta-btn">
+            <span>SEIKO速報</span>
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
+        </div>
+      </div>
 
-      <!-- モバイルメニュー開閉ボタン -->
+      <!-- モバイルメニュー開閉ボタン（qast.jp スタイル 3本バー） -->
       <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="メニューを開く">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
+        <span class="sp-bar"></span>
+        <span class="sp-bar"></span>
+        <span class="sp-bar"></span>
       </button>
     </div>
   </header>
@@ -75,7 +62,7 @@
   <div class="drawer-overlay" id="drawerOverlay"></div>
   <aside class="mobile-drawer" id="mobileDrawer">
     <div class="drawer-header">
-      <span class="brand-title" style="font-size: 1rem;">MENU</span>
+      <span class="brand-title" style="font-size: 1.15rem; font-weight: 800; color: #10243e;">東医体<span class="brand-year" style="color: #2563eb; margin-left: 0.18rem;">2027</span></span>
       <button type="button" class="drawer-close" id="drawerClose" aria-label="閉じる">
         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
