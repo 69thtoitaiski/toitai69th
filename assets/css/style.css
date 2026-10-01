@@ -122,18 +122,18 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Header & Navigation (Sharp, Crisp, Modern)
+   Header & Navigation (Cute, Stylish & Modern)
    ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 2px solid var(--color-border-sharp);
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(219, 234, 254, 0.85);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .header-inner {
@@ -149,7 +149,31 @@ ul, ol {
   text-decoration: none;
   color: var(--color-primary);
   min-width: 0;
-  gap: 0.75rem;
+  gap: 0.85rem;
+}
+
+/* キュート＆スタイリッシュなブランドエンブレム */
+.brand-emblem {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(45, 111, 214, 0.22);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease;
+}
+
+.brand-emblem svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.site-brand:hover .brand-emblem {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 20px rgba(45, 111, 214, 0.32);
 }
 
 .brand-text {
@@ -159,7 +183,7 @@ ul, ol {
 }
 
 .brand-sub {
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   color: #4b8ee6;
@@ -167,12 +191,27 @@ ul, ol {
 }
 
 .brand-main {
-  font-size: 1.24rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: 1.22rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
   color: #10243e;
   line-height: 1.25;
   transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.brand-sparkle {
+  color: #3b82f6;
+  font-size: 0.78rem;
+  display: inline-block;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.site-brand:hover .brand-sparkle {
+  transform: rotate(45deg) scale(1.25);
+  color: #2563eb;
 }
 
 .site-brand:hover .brand-main {
@@ -181,78 +220,123 @@ ul, ol {
 
 @media (max-width: 1024px) {
   .brand-sub {
-    font-size: 0.64rem;
+    font-size: 0.62rem;
   }
   .brand-main {
-    font-size: 1.1rem;
+    font-size: 1.08rem;
   }
 }
 
 @media (max-width: 768px) {
+  .site-brand {
+    gap: 0.65rem;
+  }
+  .brand-emblem {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+  }
   .brand-sub {
-    font-size: 0.58rem;
+    font-size: 0.56rem;
     letter-spacing: 0.03em;
   }
   .brand-main {
-    font-size: 0.96rem;
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 380px) {
   .brand-sub {
-    font-size: 0.52rem;
+    font-size: 0.5rem;
   }
   .brand-main {
-    font-size: 0.86rem;
+    font-size: 0.85rem;
   }
 }
 
-/* Desktop Nav */
+/* Desktop Nav (Stylish Floating Capsule) */
 .nav-menu {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  background: rgba(240, 246, 255, 0.85);
+  border: 1px solid rgba(197, 219, 255, 0.75);
+  padding: 0.28rem 0.35rem;
+  border-radius: 9999px;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.95), 0 2px 10px rgba(37, 99, 235, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .nav-link {
   display: flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.75rem 1rem;
-  font-size: 0.925rem;
-  font-weight: 700;
-  color: var(--color-text);
-  transition: all 0.2s ease;
+  padding: 0.45rem 1.05rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #334e68;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 0.02em;
   position: relative;
-  letter-spacing: 0.03em;
-  border-bottom: 2px solid transparent;
+  border: 1px solid transparent;
 }
 
 .nav-link:hover {
-  color: var(--color-primary);
-  background-color: var(--color-surface-alt);
-  border-bottom-color: var(--color-accent);
+  color: #1d4ed8;
+  background-color: rgba(255, 255, 255, 0.95);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
 }
 
 .nav-link.active {
-  color: var(--color-primary);
-  background-color: var(--color-accent-pale);
-  border-bottom: 2px solid var(--color-primary);
+  color: #1d4ed8;
+  background-color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.12);
+  border-color: rgba(219, 234, 254, 0.6);
 }
 
-/* Mobile Hamburger (Sharp Square) */
+.nav-link.active::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #3b82f6;
+  margin-left: 0.25rem;
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.6);
+}
+
+/* Mobile Hamburger (Cute Rounded Squircle) */
 .mobile-toggle {
   display: none;
-  background: var(--color-surface-alt);
-  border: 1px solid var(--color-border-sharp);
+  background: #f1f7fe;
+  border: 1px solid #d4e5f9;
+  border-radius: 12px;
   cursor: pointer;
-  padding: 0.4rem;
-  color: var(--color-primary);
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  color: #2563eb;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.08);
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-toggle:hover {
+  background: #e1effe;
+  border-color: #93c5fd;
+  color: #1d4ed8;
+  transform: scale(1.04);
 }
 
 .mobile-toggle svg {
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
 }
 
 /* Mobile Drawer Overlay */
@@ -960,12 +1044,14 @@ ul, ol {
   aspect-ratio: 1 / 1;
   background-color: #ffffff;
   border: 1px solid #dcebfa;
-  border-radius: 18px !important;
-  padding: 1.75rem 1.45rem;
+  border-radius: 20px !important;
+  padding: 1.6rem 1.25rem;
   box-shadow: 0 4px 20px rgba(18, 48, 92, 0.04);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   text-decoration: none;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
@@ -997,15 +1083,16 @@ ul, ol {
 .quick-link-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
+  margin-bottom: 0.85rem;
 }
 
-/* 大人っぽい洗練されたアイコンコンテナ（絵文字感を完全排除） */
+/* 洗練された大人っぽいアイコンコンテナ（完全中央配置） */
 .card-icon-mature {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
   background: #f1f7fe;
   border: 1px solid #d6e8fc;
   color: #3b74c4;
@@ -1017,8 +1104,8 @@ ul, ol {
 }
 
 .card-icon-mature svg {
-  width: 21px;
-  height: 21px;
+  width: 22px;
+  height: 22px;
   stroke: currentColor;
   transition: transform 0.25s ease;
 }
@@ -1027,13 +1114,16 @@ ul, ol {
   background: #2563eb;
   border-color: #2563eb;
   color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
 }
 
 .card-arrow-icon {
-  width: 30px;
-  height: 30px;
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   border: 1px solid #e1edfc;
   display: flex;
@@ -1054,31 +1144,35 @@ ul, ol {
 .quick-link-text {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 100%;
 }
 
 .quick-link-en {
   font-family: var(--font-en);
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   color: #4b8ee6;
   text-transform: uppercase;
   margin-bottom: 0.35rem;
   display: block;
   line-height: 1.35;
+  text-align: center;
   white-space: nowrap;
 }
 
 .quick-link-title,
 .quick-link-text h3 {
-  font-size: clamp(1.05rem, 1.25vw, 1.18rem);
+  font-size: clamp(0.98rem, 1.2vw, 1.15rem);
   font-weight: 700;
   color: #10243e;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
   letter-spacing: 0.02em;
   line-height: 1.35;
+  text-align: center;
   white-space: nowrap;
   transition: color 0.2s ease;
 }
@@ -1089,73 +1183,79 @@ ul, ol {
 
 .quick-link-desc,
 .quick-link-text p {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   color: #587597;
-  line-height: 1.5;
+  line-height: 1.45;
   word-break: auto-phrase;
   margin: 0;
+  text-align: center;
 }
 
 @media (max-width: 640px) {
   .quick-links-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.85rem;
-    margin-top: 1.8rem;
-    margin-bottom: 2.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   .quick-link-card {
     aspect-ratio: 1 / 1;
-    min-height: 165px;
-    padding: 1.15rem 0.95rem !important;
-    border-radius: 14px !important;
-    justify-content: space-between;
+    min-height: 155px;
+    padding: 0.85rem 0.6rem !important;
+    border-radius: 16px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .quick-link-header {
+    margin-bottom: 0.45rem;
   }
 
   .card-icon-mature {
-    width: 34px;
-    height: 34px;
-    border-radius: 9px;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
   }
 
   .card-icon-mature svg {
-    width: 17px;
-    height: 17px;
+    width: 18px;
+    height: 18px;
   }
 
   .card-arrow-icon {
-    width: 24px;
-    height: 24px;
-  }
-
-  .card-arrow-icon svg {
-    width: 12px;
-    height: 12px;
+    display: none;
   }
 
   .quick-link-en {
-    font-size: 0.58rem;
-    letter-spacing: 0.08em;
-    margin-bottom: 0.2rem;
+    font-size: 0.54rem;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.15rem;
     line-height: 1.2;
     white-space: normal;
+    text-align: center;
   }
 
   .quick-link-title,
   .quick-link-text h3 {
-    font-size: 0.88rem;
-    margin-bottom: 0.25rem;
+    font-size: 0.82rem;
+    margin-bottom: 0.2rem;
     line-height: 1.3;
     white-space: normal;
+    text-align: center;
   }
 
   .quick-link-desc,
   .quick-link-text p {
-    font-size: 0.72rem;
-    line-height: 1.35;
+    font-size: 0.66rem;
+    line-height: 1.3;
     color: #587394;
     display: block !important;
     word-break: auto-phrase;
+    text-align: center;
   }
 }
 
