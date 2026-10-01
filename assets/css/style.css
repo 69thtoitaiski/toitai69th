@@ -168,8 +168,8 @@ ul, ol {
 
 .brand-main {
   font-size: 1.24rem;
-  font-weight: 900;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   color: #10243e;
   line-height: 1.25;
   transition: color 0.2s ease;
@@ -409,308 +409,332 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Hero Section (Plan A - Editorial Magazine Hero & Framed Alpine Panorama)
+   Hero Section (Jiichiro Minimalist Style - Full Alpine Background)
+   Reference: https://www.jiichiro-shop.com
    ========================================================================== */
 .hero {
   position: relative;
-  background: linear-gradient(180deg, #f4f8fe 0%, #eaf3fd 65%, #f6faff 100%);
-  padding: 4.5rem 0 4rem;
-  overflow: hidden;
-  border-bottom: 1px solid #dce9f8;
-}
-
-.hero-container {
+  min-height: 85vh;
+  min-height: 85svh;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background-color: #0c1f36;
+  background-image: 
+    linear-gradient(
+      180deg, 
+      rgba(11, 28, 51, 0.46) 0%, 
+      rgba(18, 52, 98, 0.22) 35%, 
+      rgba(11, 29, 54, 0.44) 65%, 
+      rgba(8, 20, 38, 0.82) 100%
+    ),
+    url('../images/hero-bg.png');
+  background-position: center 28%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 7rem 0 6.5rem;
+  overflow: hidden;
   text-align: center;
 }
 
-.hero-editorial-body {
-  max-width: 900px;
-  margin: 0 auto 2.8rem;
+/* 繊細なビネットグラデーション（白銀の峰々の輝きを生かしつつ文字視認性を最大化） */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 42%, transparent 30%, rgba(6, 17, 32, 0.42) 100%);
+  pointer-events: none;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 980px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.hero-subtag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 1.15rem;
-  background: #ffffff;
-  border: 1px solid #c9e0fa;
-  border-radius: var(--radius-pill);
-  font-size: 0.825rem;
-  font-weight: 700;
-  color: #3b74c4;
-  letter-spacing: 0.08em;
-  box-shadow: 0 2px 8px rgba(74, 132, 212, 0.08);
-  margin-bottom: 1.25rem;
-}
-
-.subtag-dot {
-  width: 7px;
-  height: 7px;
-  background-color: #2563eb;
-  border-radius: 50%;
+/* 1. 治一郎スタイル：端正で品格あるエディション表記（広い文字間・中太字で洗練美） */
+.hero-edition {
   display: inline-block;
+  font-family: var(--font-ja);
+  font-size: clamp(0.95rem, 2.2vw, 1.25rem);
+  font-weight: 500;
+  letter-spacing: 0.26em;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 0.9rem;
+  text-shadow: 0 2px 14px rgba(6, 17, 32, 0.5);
+  padding-left: 0.26em; /* 広いトラッキングの視覚的センタリング補正 */
 }
 
-.hero-main-title {
-  font-size: clamp(2.6rem, 6.2vw, 4.2rem);
-  font-weight: 900;
-  color: #10243e;
-  line-height: 1.18;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.65rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.4rem 0.85rem;
-}
-
-.hero-year-badge {
-  color: #2563eb;
-  font-family: var(--font-en);
-  font-weight: 800;
-  letter-spacing: 0.02em;
-}
-
-.hero-en-title {
-  font-family: var(--font-en);
-  font-size: clamp(0.78rem, 1.6vw, 0.92rem);
+/* 2. メインタイトル：「スキー競技」（堂々とした余白と清麗な太さ） */
+.hero-title {
+  font-family: var(--font-ja);
+  font-size: clamp(2.8rem, 7.5vw, 4.8rem);
   font-weight: 700;
-  color: #5a82b2;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  margin-bottom: 1.85rem;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 3px 24px rgba(6, 17, 32, 0.5);
+  padding-left: 0.2em;
 }
 
-.hero-info-pills {
+/* 3. 英語サブタイトル（Montserrat・ハイエンドトラッキング） */
+.hero-en {
+  font-family: var(--font-en);
+  font-size: clamp(0.72rem, 1.4vw, 0.86rem);
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  color: #c4dcfe;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+  padding-left: 0.28em;
+  text-shadow: 0 2px 10px rgba(6, 17, 32, 0.4);
+}
+
+/* 4. 会期・会場：洗練されたフロストガラスバー */
+.hero-meta-bar {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.5rem 1.25rem;
-  padding: 0.85rem 1.85rem;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1.5px solid #d6e7f8;
+  gap: 0.6rem 1.6rem;
+  padding: 0.75rem 2.2rem;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: var(--radius-pill);
-  box-shadow: 0 4px 18px rgba(18, 48, 92, 0.05);
+  box-shadow: 0 8px 30px rgba(6, 17, 32, 0.2);
   margin-bottom: 2rem;
 }
 
-.hero-info-item {
+.hero-meta-item {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.92rem;
-  color: #1e293b;
+  gap: 0.65rem;
+  font-size: 0.94rem;
+  color: #ffffff;
 }
 
-.info-label {
+.hero-meta-label {
   display: inline-block;
   font-size: 0.72rem;
-  font-weight: 800;
-  padding: 0.2rem 0.55rem;
-  background-color: #eaf3fe;
-  color: #2563eb;
-  border-radius: 4px;
-  letter-spacing: 0.04em;
-}
-
-.info-val {
   font-weight: 700;
-  color: #12243d;
+  letter-spacing: 0.08em;
+  padding: 0.18rem 0.6rem;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 4px;
+  color: #ffffff;
 }
 
-.info-sep {
-  color: #bfdbfe;
+.hero-meta-val {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+.hero-meta-divider {
+  color: rgba(255, 255, 255, 0.4);
   font-weight: 300;
 }
 
-.hero-action-row {
+/* 5. ミニマルアクション行（主管カプセル & SEIKO速報ガラスピル） */
+.hero-actions {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
-  width: 100%;
 }
 
 .hero-host-pill {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 0.75rem 2rem;
-  background: #ffffff;
-  border: 1.5px solid #bddbfc;
-  border-radius: 12px;
-  color: #12243d;
-  font-size: 0.96rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  box-shadow: 0 4px 14px rgba(74, 132, 212, 0.1);
+  padding: 0.75rem 1.8rem;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: var(--radius-pill);
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  box-shadow: 0 4px 16px rgba(6, 17, 32, 0.15);
 }
 
-.btn-seiko-pill {
+.hero-btn-seiko {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  background: #dc2626;
-  border: 1.5px solid #ef4444;
-  color: #ffffff !important;
-  padding: 0.75rem 2.2rem;
-  font-size: 0.98rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  border-radius: 12px;
-  text-decoration: none;
-  box-shadow: 0 4px 18px rgba(220, 38, 38, 0.35);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.btn-seiko-pill:hover {
-  background: #b91c1c;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.45);
-  color: #ffffff !important;
-}
-
-/* 額装パノラマ写真フレーム */
-.hero-photo-frame {
-  width: 100%;
-  max-width: 1080px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.hero-photo-inner {
-  position: relative;
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(18, 48, 92, 0.14), 0 4px 12px rgba(18, 48, 92, 0.05);
-  border: 4px solid #ffffff;
-  background-color: #dbeafe;
-  aspect-ratio: 21 / 9;
-}
-
-@media (max-width: 768px) {
-  .hero-photo-inner {
-    aspect-ratio: 16 / 9;
-    border-radius: 16px;
-    border-width: 3px;
-  }
-}
-
-.hero-photo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 25%;
-  display: block;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.hero-photo-inner:hover .hero-photo-img {
-  transform: scale(1.025);
-}
-
-.hero-photo-badge {
-  position: absolute;
-  bottom: 1.25rem;
-  right: 1.25rem;
-  background: rgba(16, 36, 62, 0.78);
+  padding: 0.75rem 2rem;
+  background: rgba(220, 38, 38, 0.88);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 0.6rem 1.15rem;
-  border-radius: 10px;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  text-align: right;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: var(--radius-pill);
+  color: #ffffff !important;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  box-shadow: 0 6px 22px rgba(220, 38, 38, 0.38);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.badge-alpine {
-  font-family: var(--font-en);
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  color: #93c5fd;
+.hero-btn-seiko:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(220, 38, 38, 0.52);
+  border-color: #ffffff;
 }
 
-.badge-venue {
-  font-size: 0.76rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
-  margin-top: 0.15rem;
-}
-
-@media (max-width: 640px) {
-  .hero {
-    padding: 3rem 0 2.5rem;
-  }
-  .hero-editorial-body {
-    margin-bottom: 2rem;
-  }
-  .hero-subtag {
-    font-size: 0.74rem;
-    padding: 0.35rem 0.9rem;
-  }
-  .hero-main-title {
-    font-size: 2.3rem;
-  }
-  .hero-info-pills {
-    border-radius: 14px;
-    padding: 0.75rem 1rem;
-    width: 100%;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .info-sep {
-    display: none;
-  }
-  .hero-action-row {
-    flex-direction: column;
-    width: 100%;
-  }
-  .hero-host-pill,
-  .btn-seiko-pill {
-    width: 100%;
-    max-width: 320px;
-  }
-  .hero-photo-badge {
-    bottom: 0.75rem;
-    right: 0.75rem;
-    padding: 0.45rem 0.8rem;
-  }
-  .badge-alpine {
-    font-size: 0.58rem;
-  }
-  .badge-venue {
-    font-size: 0.66rem;
-  }
-}
-
-.live-indicator-dot {
-  width: 9px;
-  height: 9px;
+.hero-live-dot {
+  width: 8px;
+  height: 8px;
   background-color: #ffffff;
   border-radius: 50%;
   display: inline-block;
-  box-shadow: 0 0 8px #ffffff;
+  box-shadow: 0 0 10px #ffffff;
   animation: liveBlink 1.8s infinite ease-in-out;
+}
+
+.hero-btn-arrow {
+  transition: transform 0.25s ease;
+}
+
+.hero-btn-seiko:hover .hero-btn-arrow {
+  transform: translateX(3px);
+}
+
+/* 6. 治一郎スタイル：ミニマルスクロールインジケーター */
+.hero-scroll {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  pointer-events: none;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.hero-scroll-text {
+  font-family: var(--font-en);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  color: rgba(255, 255, 255, 0.85);
+  padding-left: 0.26em;
+}
+
+.hero-scroll-line {
+  width: 1px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-scroll-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(180deg, #ffffff, rgba(255, 255, 255, 0));
+  animation: jiichiroScroll 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes jiichiroScroll {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
 }
 
 @keyframes liveBlink {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.35; transform: scale(0.8); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 78vh;
+    padding: 5.5rem 0 5rem;
+    background-position: center 32%;
+  }
+  .hero-edition {
+    font-size: 0.88rem;
+    letter-spacing: 0.2em;
+    padding-left: 0.2em;
+    margin-bottom: 0.6rem;
+  }
+  .hero-title {
+    font-size: 2.6rem;
+    letter-spacing: 0.16em;
+    padding-left: 0.16em;
+  }
+  .hero-en {
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    margin-bottom: 1.8rem;
+  }
+  .hero-meta-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    width: 90%;
+    max-width: 360px;
+    border-radius: 16px;
+  }
+  .hero-meta-divider {
+    display: none;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 90%;
+    max-width: 360px;
+    gap: 0.75rem;
+  }
+  .hero-host-pill,
+  .hero-btn-seiko {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-scroll {
+    bottom: 0.75rem;
+  }
+  .hero-scroll-line {
+    height: 24px;
+  }
 }
 
 /* ==========================================================================
@@ -910,7 +934,7 @@ ul, ol {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  margin-top: 3.5rem;
+  margin-top: -3.5rem;
   position: relative;
   z-index: 10;
   margin-bottom: 3.5rem;
@@ -920,6 +944,7 @@ ul, ol {
   .quick-links-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
+    margin-top: -2.5rem;
   }
 }
 
