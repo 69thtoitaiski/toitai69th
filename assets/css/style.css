@@ -708,66 +708,6 @@ ul, ol {
   transform: translateX(3px);
 }
 
-/* 6. 治一郎スタイル：ミニマルスクロールインジケーター */
-.hero-scroll {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.45rem;
-  pointer-events: none;
-  opacity: 0.75;
-  transition: opacity 0.3s ease;
-}
-
-.hero-scroll-text {
-  font-family: var(--font-en);
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.26em;
-  color: rgba(255, 255, 255, 0.85);
-  padding-left: 0.26em;
-}
-
-.hero-scroll-line {
-  width: 1px;
-  height: 34px;
-  background: rgba(255, 255, 255, 0.25);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-scroll-line::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: linear-gradient(180deg, #ffffff, rgba(255, 255, 255, 0));
-  animation: jiichiroScroll 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
-}
-
-@keyframes jiichiroScroll {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  35% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(200%);
-    opacity: 0;
-  }
-}
-
 @keyframes liveBlink {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.35; transform: scale(0.8); }
@@ -776,47 +716,52 @@ ul, ol {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .hero {
-    min-height: 78vh;
-    padding: 5.5rem 0 5rem;
-    background-position: center 32%;
+    min-height: 84vh;
+    min-height: 84svh;
+    padding: 5.5rem 1.25rem 5.5rem;
+    background-position: center 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .hero-title {
-    gap: 0.5rem;
-    margin-bottom: 1.8rem;
+    gap: 0.8rem;
+    margin-bottom: clamp(2.8rem, 8vw, 4rem); /* タイトル下の十分で品格のある余白バランス */
   }
   .hero-title-line {
-    font-size: clamp(1.2rem, 4.4vw, 1.85rem);
-    letter-spacing: 0.1em;
-    padding-left: 0.1em;
-    line-height: 1.3;
+    font-size: clamp(1.25rem, 4.6vw, 1.85rem);
+    letter-spacing: 0.12em;
+    padding-left: 0.12em;
+    line-height: 1.35;
   }
   .hero-meta-bar {
     flex-direction: column;
-    gap: 0.5rem;
-    padding: 0.75rem 1.25rem;
-    width: 90%;
+    gap: 0.6rem;
+    padding: 0.9rem 1.5rem;
+    width: 100%;
     max-width: 360px;
-    border-radius: 16px;
+    border-radius: 18px;
+    margin-bottom: 1.85rem;
   }
   .hero-meta-divider {
     display: none;
   }
   .hero-actions {
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     max-width: 360px;
-    gap: 0.75rem;
+    gap: 0.85rem;
   }
   .hero-host-pill,
   .hero-btn-seiko {
     width: 100%;
     justify-content: center;
-  }
-  .hero-scroll {
-    bottom: 0.75rem;
-  }
-  .hero-scroll-line {
-    height: 24px;
   }
 }
 
